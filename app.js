@@ -231,7 +231,7 @@ setTimeout(fetchAndRefreshIndexPrices, 120000);
 
 app.get('/api/cryptodata', (req, res) => {
     res.json(cryptoData);
-});
+});heroku logs--tail
 
 app.get('/api/topCryptoData', (req, res) => {
     res.json(topCryptoData);

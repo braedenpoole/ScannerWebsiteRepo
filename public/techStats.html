@@ -442,7 +442,7 @@
         }
 
         function updateTechPrices() {
-            axios.get('https://bladewebsite.herokuapp.com/api/TechPrices')
+            axios.get('https://api/TechPrices')
                 .then((response) => {
                     const data = response.data;
 
@@ -575,7 +575,7 @@
 
         //Getting 'Indice' prices. These are not actually the indices, they are ETF's (Exchange Traded Funds) that are 1 to 1 in price to the indices.
         function updateIndexPrices() {
-            axios.get('https://bladewebsite.herokuapp.com/api/indexPrices')
+            axios.get('https://api/indexPrices')
                 .then((response) => {
                     const data = response.data;
 

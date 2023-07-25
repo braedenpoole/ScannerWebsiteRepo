@@ -229,6 +229,10 @@ function fetchAndRefreshIndexPrices() {
 
 setTimeout(fetchAndRefreshIndexPrices, 120000);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to BladeWebsite!'); // Or any other response you want to send
+});
+
 app.get('/api/cryptodata', (req, res) => {
     res.json(cryptoData);
 });
@@ -248,4 +252,3 @@ app.get('/api/indexPrices', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
-

@@ -15,7 +15,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Content-Security-Policy', "default-src 'self'; font-src 'self' data:;");
+    res.setHeader('Content-Security-Policy', "default-src 'self' data:;");
     next();
 });
 
@@ -34,7 +34,7 @@ app.use('/coingecko', coinGeckoProxy);
 
 async function fetchTopCryptoData() {
     try {
-        const response = await axios.get('https://git.heroku.com/bladewebsite.git/coingecko/api/v3/coins/markets', {
+        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',
@@ -53,7 +53,7 @@ async function fetchTopCryptoData() {
 
 async function fetchCryptoData() {
     try {
-        const response = await axios.get('https://git.heroku.com/bladewebsite.git/coingecko/api/v3/coins/markets', {
+        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',
@@ -245,6 +245,6 @@ app.get('/api/indexPrices', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server listening on port 4000');
+    console.log('Server listening on port ${port}');
 });
 

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+
+        .techLink {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            position: absolute;
+            background: #E5E4E2;
+            border: 2px solid black;
+            text-align: center;
+            left: 3%;
+            bottom: 30%;
+            width: 120px;
+            height: 110px;
+            z-index: 1;
+            line-height: 35px;
+        }
+
+            .techLink:hover {
+                transform: scale(1.1);
+            }
+
+        .trendingLink {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            position: absolute;
+            background: white;
+            border: 2px solid black;
+            text-align: center;
+            left: 3%;
+            bottom: 50%;
+            width: 120px;
+            height: 110px;
+            z-index: 1;
+        }
+
+            .trendingLink:hover {
+                transform: scale(1.1);
+            }
+
+        .cryptoLink {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            position: absolute;
+            background: white;
+            border: 2px solid black;
+            text-align: center;
+            left: 3%;
+            bottom: 70%;
+            width: 120px;
+            height: 110px;
+            z-index: 1;
+            line-height: 35px;
+        }
+
+            .cryptoLink:hover {
+                transform: scale(1.1);
+            }
+
+
+        .top-bar {
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            position: absolute;
+            background: white;
+            text-align: center;
+            left: 90%;
+            width: 120px;
+        }
+
+        .landingPageLink {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            margin: 35px 25px 40px;
+        }
+
+            .landingPageLink:hover {
+                transform: scale(1.1);
+            }
+
+        .aboutPageLink {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin: 0px 25px;
+        }
+
+            .aboutPageLink:hover {
+                transform: scale(1.1);
+            }
+
+
+        .index-stuff {
+            background: black;
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+        .indexPrices-iBox {
+            display: inline-block;
+            min-width: 252px;
+            max-width: 252px;
+            min-height: 60px;
+            max-height: 60px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+
+
+            .indexPrices-iBox.red-bg {
+                color: red;
+            }
+
+            .indexPrices-iBox.green-bg {
+                color: #54C571;
+            }
+
+        .title {
+            color: blue;
+        }
+
+        .tradingview-widget-container {
+            background: #E5E4E2;
+        }
+
+        .color-key {
+            display: flex;
+            position: absolute;
+            background: transparent;
+            margin-top: 640px;
+            margin-left: 23%;
+            z-index: 2;
+        }
+
+        .color-key-text {
+            display: flex;
+            background: transparent;
+            position: absolute;
+            background: transparent;
+            margin-left: 8%;
+            font-size: 16px;
+            z-index: 1;
+        }
+
+        .coloredBoxGreen {
+            background: #A0D6B4;
+            width: 30px;
+            height: 30px;
+            margin-left: 120px;
+            color: #A0D6B4;
+            border: 2px solid black;
+        }
+
+        .coloredBoxVeryGreen {
+            background: #54C571;
+            width: 30px;
+            height: 30px;
+            margin-left: 190px;
+            color: #54C571;
+            border: 2px solid black;
+        }
+
+        .coloredBoxRed {
+            background: #FFB8BF;
+            width: 30px;
+            height: 30px;
+            margin-left: 190px;
+            color: #FFB8BF;
+            border: 2px solid black;
+        }
+
+        .coloredBoxVeryRed {
+            background: #E55451;
+            width: 30px;
+            height: 30px;
+            margin-left: 190px;
+            color: #E55451;
+            border: 2px solid black;
+        }
+
+        .keyMaster {
+            margin: 0px 20px;
+            width: 100px;
+            border: 2px solid black;
+            margin-top: 635px;
+            padding: 2px;
+            text-align: center;
+            background: #E5E4E2;
+        }
+
+        .textGreen {
+            width: 110px;
+            margin: 0px 60px;
+            margin-top: 650px;
+        }
+
+        .textVeryGreen {
+            width: 110px;
+            margin: 0px 60px;
+            margin-top: 650px;
+        }
+
+        .textRed {
+            width: 110px;
+            margin: 0px 60px;
+            margin-top: 650px;
+        }
+
+        .textVeryRed {
+            width: 110px;
+            margin: 0px 60px;
+            margin-top: 650px;
+        }
+
+
+
+        .container-boxes {
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr; /* Four equal-width columns */
+            justify-content: center;
+            background: white;
+        }
+
+        .column {
+            margin: 30px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            margin-top: -25px;
+        }
+
+        .techPrices-box.red-bg,
+        .evPrices-box.red-bg,
+        .chipPrices-box.red-bg {
+            background: #FFB8BF;
+        }
+
+        .techPrices-box.veryRed-bg,
+        .evPrices-box.veryRed-bg,
+        .chipPrices-box.veryRed-bg {
+            background: #E55451;
+        }
+
+        .techPrices-box.green-bg,
+        .evPrices-box.green-bg,
+        .chipPrices-box.green-bg {
+            background: #A0D6B4;
+        }
+
+        .techPrices-box.veryGreen-bg,
+        .evPrices-box.veryGreen-bg,
+        .chipPrices-box.veryGreen-bg{
+            background: #54C571;
+        }
+
+        .box-container {
+            background: transparent;
+            padding: 10px; /* Add padding instead of margin */
+            background: white;
+        }
+
+
+        .techPrices-box,
+        .evPrices-box,
+        .chipPrices-box{
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 50px;
+            margin: 0px 0px 10px;
+        }
+
+        .tradingViewText {
+            background: #E5E4E2;
+        }
+
+        .bottom-text {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s;
+            font-size: 18px;
+        }
+
+        .buttonScroll {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            position: absolute;
+            background: #E5E4E2;
+            border: 2px solid black;
+            text-align: center;
+            left: 90%;
+            bottom: 3%;
+            width: 110px;
+            height: 50px;
+            z-index: 1;
+        }
+
+            .buttonScroll:hover {
+                transform: scale(1.1);
+            }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="index-stuff">
+        <div class="indexPrices-box" id="index-prices"></div>
+    </div>
+
+    <div class="top-bar">
+        <a href="landingPage.html" target="_self" class="landingPageLink">Home</a><br />
+        <a href="projectDetails.html" target="_self" class="aboutPageLink">Project Details</a>
+    </div>
+
+    <div class="color-key">
+        <div class="coloredBoxGreen">eee</div>
+        <div class="coloredBoxVeryGreen">eee</div>
+        <div class="coloredBoxRed">eee</div>
+        <div class="coloredBoxVeryRed">eee</div>
+    </div>
+    <div class="color-key-text">
+        <div class="keyMaster">Color Key By 24 Hour Gains</div>
+        <div class="textGreen">Greater than 0%</div>
+        <div class="textVeryGreen">Greater than 3%</div>
+        <div class="textRed">Less than 0%</div>
+        <div class="textVeryRed">Less than -3 %</div>
+    </div>
+    <a href="techStats.html" target="_self" class="techLink">Click to See Tech Stocks</a>
+    <a href="trendingStats.html" target="_self" class="trendingLink">Click to See Trending Stocks</a>
+    <a href="cryptoStats.html" target="_self" class="cryptoLink">Click to See Crypto Coins</a>
+
+    <font COLOR="black">
+        <div class="container-boxes">
+            <div class="column">
+                <div class="box-container">
+                    <div class="header">Top Tech</div>
+                    <div class="techPrices-box" id="tech-prices"></div><br /><br />
+                </div>
+            </div>
+            <div class="column">
+                <div class="box-container">
+                    <div class="header">Top EV</div>
+                    <div class="evPrices-box" id="ev-prices"></div><br /><br />
+                </div>
+            </div>
+            <div class="column">
+                <div class="box-container">
+                    <div class="header">Top Chip Makers</div>
+                    <div class="chipPrices-box" id="chip-prices"></div><br /><br />
+                </div>
+            </div>
+        </div>
+        <center><div class="tradingViewText"><br /><br /><br /><br /><strong><font size="+2">Check Out Other Stocks!</font></strong><br /><br /><br /><br /></div></center>
+    </font>
+
+    <button id="scrollButton" class="buttonScroll">Look Up Any Stock</button>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div id="tradingview_7807c"></div>
+        <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                <span class="blue-text">Track all markets on TradingView</span>
+            </a>
+        </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+            new TradingView.widget({
+                "symbol": "NASDAQ:MARA",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_7807c",
+                "width": "800",
+                "height": "500"
+            });
+        </script>
+        <br /><br />
+    </div>
+    <!-- TradingView Widget END -->
+
+    <center><div class="bottom-text"><br /><strong>Crypto data brought to you by CoinGecko | Stock data brought to you by Finnhub</strong><br /><br /></div></center>
+
+
+
+
+    <script>
+
+        function formatMarketCap(cap) {
+            const abbrev = ['', 'K', 'M', 'B', 'T']; // Add more abbreviations as needed
+            const decimals = 2;
+
+            const magnitude = Math.floor(Math.log10(cap) / 3);
+            const roundedCap = (cap / Math.pow(1000, magnitude)).toFixed(decimals);
+
+            return `${roundedCap}${abbrev[magnitude]}`;
+        }
+
+        function updateTechPrices() {
+            axios.get('http://bladewebsite.herokuapp.com/api/TechPrices')
+                .then((response) => {
+                    const data = response.data;
+
+                    if (data && Array.isArray(data)) {
+
+                        const techStocks = data.slice(0, 5);
+                        const evStocks = data.slice(5, 10);
+                        const chipStocks = data.slice(10, 15);
+
+
+                        let html = '';
+                        for (let i = 0; i < techStocks.length; i++) {
+                            const stock = techStocks[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const change7d = stock.change_7d;
+                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            if (name == 'Amazon.com') {
+                                name = 'Amazon'
+                            }
+                            // Check if the 24-hour change
+                            const isNegativeChange = change24h < 0;
+                            const bgClass = isNegativeChange ? 'red-bg' : 'green-bg';
+                            // Add veryRed-bg or veryGreen-bg classes for changes greater than 3%
+                            const isVeryNegativeChange = change24h < -3;
+                            const isVeryPositiveChange = change24h > 3;
+                            if (isVeryNegativeChange) {
+                                html += `<div class="techPrices-box veryRed-bg">`;
+                            } else if (isVeryPositiveChange) {
+                                html += `<div class="techPrices-box veryGreen-bg">`;
+                            } else {
+                                html += `<div class="techPrices-box ${bgClass}">`;
+                            }
+
+                            html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                            html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
+                            html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            html += `</div>`;
+                        };
+                        document.getElementById('tech-prices').innerHTML = html;
+                        html = '';
+
+                        for (let i = 0; i < evStocks.length; i++) {
+                            const stock = evStocks[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const change7d = stock.change_7d;
+                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+
+                            // Check if the 24-hour change
+                            const isNegativeChange = change24h < 0;
+                            const bgClass = isNegativeChange ? 'red-bg' : 'green-bg';
+                            // Add veryRed-bg or veryGreen-bg classes for changes greater than 3%
+                            const isVeryNegativeChange = change24h < -3;
+                            const isVeryPositiveChange = change24h > 3;
+                            if (isVeryNegativeChange) {
+                                html += `<div class="evPrices-box veryRed-bg">`;
+                            } else if (isVeryPositiveChange) {
+                                html += `<div class="evPrices-box veryGreen-bg">`;
+                            } else {
+                                html += `<div class="evPrices-box ${bgClass}">`;
+                            }
+
+                            html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                            html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
+                            html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            html += `</div>`;
+                        };
+                        document.getElementById('ev-prices').innerHTML = html;
+                        html = '';
+
+                        for (let i = 0; i < chipStocks.length; i++) {
+                            const stock = chipStocks[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const change7d = stock.change_7d;
+                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            if (name == 'Taiwan') {
+                                name = 'TSM Manufacturing';
+                            }
+                            if (name == 'Advanced') {
+                                name = 'AMD';
+                            }
+                            // Check if the 24-hour change
+                            const isNegativeChange = change24h < 0;
+                            const bgClass = isNegativeChange ? 'red-bg' : 'green-bg';
+                            // Add veryRed-bg or veryGreen-bg classes for changes greater than 3%
+                            const isVeryNegativeChange = change24h < -3;
+                            const isVeryPositiveChange = change24h > 3;
+                            if (isVeryNegativeChange) {
+                                html += `<div class="chipPrices-box veryRed-bg">`;
+                            } else if (isVeryPositiveChange) {
+                                html += `<div class="chipPrices-box veryGreen-bg">`;
+                            } else {
+                                html += `<div class="chipPrices-box ${bgClass}">`;
+                            }
+
+                            html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                            html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
+                            html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            html += `</div>`;
+                        };
+                        document.getElementById('chip-prices').innerHTML = html;
+
+                    } else {
+                        document.getElementById('tech-prices').innerText = 'Error retrieving tech stock prices.';
+                        document.getElementById('ev-prices').innerText = 'Error retrieving ev stock prices.';
+                        document.getElementById('chip-prices').innerText = 'Error retrieving chip stock prices.';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error retrieving tech prices:', error);
+                    document.getElementById('tech-prices').innerText = 'Error retrieving stock prices.';
+                    document.getElementById('ev-prices').innerText = 'Error retrieving ev stock prices.';
+                    document.getElementById('chip-prices').innerText = 'Error retrieving semi stock prices.';
+                });
+        }
+
+        //Getting 'Indice' prices. These are not actually the indices, they are ETF's (Exchange Traded Funds) that are 1 to 1 in price to the indices.
+        function updateIndexPrices() {
+            axios.get('http://bladewebsite.herokuapp.com/api/indexPrices')
+                .then((response) => {
+                    const data = response.data;
+
+                    if (data && Array.isArray(data)) {
+                        let html = '';
+                        data.forEach((stock) => {
+                            const symbol = stock.symbol;
+                            const name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const change7d = stock.change_7d;
+                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            if (change24h < 0) {
+                                html += '<div class="indexPrices-iBox red-bg">';
+                            } else {
+                                html += '<div class="indexPrices-iBox green-bg">';
+                            }
+
+                            html += `<div><strong>${name} ${change24h.toFixed(2)}%</strong></div>`;
+                            html += `</div>`;
+
+                        });
+
+                        document.getElementById('index-prices').innerHTML = html;
+                    } else {
+                        document.getElementById('index-prices').innerText = 'Error retrieving index prices.';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error retrieving index prices:', error);
+                    document.getElementById('index-prices').innerText = 'Error retrieving index prices.';
+                });
+        }
+
+        const scrollButton = document.getElementById('scrollButton');
+
+        function scrollToNextPage() {
+            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+            window.scrollTo({
+                top: window.pageYOffset + viewportHeight,
+                behavior: 'smooth'
+            });
+        }
+        scrollButton.addEventListener('click', scrollToNextPage);
+
+
+
+        updateTechPrices();
+        updateIndexPrices();
+
+
+        setInterval(updateTechPrices, 300000); // Fetch tech stock prices every 5 minutes (300000 milliseconds)
+        setInterval(updateIndexPrices, 300000); // Fetch index prices every 5 minutes. (ETF's for each index)
+
+    </script>
+</body>
+</html>

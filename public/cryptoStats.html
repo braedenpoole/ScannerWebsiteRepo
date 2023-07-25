@@ -426,6 +426,7 @@
 
     <script>
         function updateCryptoPrices() {
+                    html += `<div class="cryptoPrices-box veryGreen-bg">`;
             axios.get('https://git.heroku.com/bladewebsite.git/api/cryptodata')
                 .then((response) => {
                     const data = response.data;
@@ -454,7 +455,6 @@
                             if (isVeryNegativeChange24h) {
                                 html += `<div class="cryptoPrices-box veryRed-bg">`;
                             } else if (isVeryPositiveChange24h) {
-                                html += `<div class="cryptoPrices-box veryGreen-bg">`;
                             } else {
                                 html += `<div class="cryptoPrices-box ${bgClass24h}">`;
                             }

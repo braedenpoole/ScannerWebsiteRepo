@@ -1,14 +1,14 @@
-const express = require('express')
-const { createProxyMiddleware } = require('http-proxy-middleware')
-const axios = require('axios')
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const axios = require('axios');
 
-const app = express()
-const port = process.env.PORT || 4000
+const app = express();
+const port = process.env.PORT || 4000;
 
-let TechPrices = null
-let cryptoData = null
-let topCryptoData = null
-let indexPrices = null
+let TechPrices = null;
+let cryptoData = null;
+let topCryptoData = null;
+let indexPrices = null;
 
 // Enable CORS headers
 app.use((req, res, next) => {

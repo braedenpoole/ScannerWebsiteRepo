@@ -33,7 +33,7 @@ app.use('/coingecko', coinGeckoProxy);
 
 async function fetchTopCryptoData() {
     try {
-        const response = await axios.get('http://bladewebsite.herokuapp.com/coingecko/api/v3/coins/markets', {
+        const response = await axios.get('https://git.heroku.com/bladewebsite.git/coingecko/api/v3/coins/markets', {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',
@@ -52,7 +52,7 @@ async function fetchTopCryptoData() {
 
 async function fetchCryptoData() {
     try {
-        const response = await axios.get('http://bladewebsite.herokuapp.com/coingecko/api/v3/coins/markets', {
+        const response = await axios.get('https://git.heroku.com/bladewebsite.git/coingecko/api/v3/coins/markets', {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',

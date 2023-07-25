@@ -217,7 +217,6 @@ async function fetchIndexPrices() {
 fetchCryptoData();
 fetchTopCryptoData();
 fetchTechPrices();
-setTimeout(fetchAndRefreshIndexPrices, 120000);
 
 setInterval(fetchCryptoData, 300000);
 setInterval(fetchTechPrices, 300000);
@@ -227,6 +226,8 @@ function fetchAndRefreshIndexPrices() {
     fetchIndexPrices();
     setInterval(fetchIndexPrices, 300000);
 }
+
+setTimeout(fetchAndRefreshIndexPrices, 120000);
 
 app.get('/api/cryptodata', (req, res) => {
     res.json(cryptoData);
@@ -245,6 +246,6 @@ app.get('/api/indexPrices', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server listening on port ${port}');
+    console.log(`Server listening on port ${port}`);
 });
 

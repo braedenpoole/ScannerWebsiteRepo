@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
     <style>
         * {
             margin: 0;
@@ -428,7 +428,6 @@
 
     <script>
         function updateCryptoPrices() {
-                    html += `<div class="cryptoPrices-box veryGreen-bg">`;
             axios.get('https://git.heroku.com/bladewebsite.git/api/cryptodata')
                 .then((response) => {
                     const data = response.data;
@@ -457,6 +456,7 @@
                             if (isVeryNegativeChange24h) {
                                 html += `<div class="cryptoPrices-box veryRed-bg">`;
                             } else if (isVeryPositiveChange24h) {
+                                html += `<div class="cryptoPrices-box veryGreen-bg">`;
                             } else {
                                 html += `<div class="cryptoPrices-box ${bgClass24h}">`;
                             }

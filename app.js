@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader(
         'Content-Security-Policy',
-        "default-src 'self' https://api.coingecko.com https://finnhub.io; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net/npm/axios/dist https://s3.tradingview.com; script-src-elem 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net/npm/axios/dist https://s3.tradingview.com"
+        "default-src 'self' https://api.coingecko.com https://finnhub.io; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
     );
     next();
 });

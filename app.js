@@ -15,10 +15,6 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader(
-        'Content-Security-Policy',
-        "default-src 'self' https://api.coingecko.com https://finnhub.io; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
-    );
     next();
 });
 

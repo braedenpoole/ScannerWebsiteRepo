@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
-    <script nonce="randomly_generated_nonce" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script nonce="randomly_generated_nonce" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" nonce="randomly_generated_nonce" src="https://s3.tradingview.com/tv.js"></script>
+    <script nonce="<%= nonce %>" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script nonce="<%= nonce %>" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" nonce="<%= nonce %>" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
         new TradingView.widget({
             "symbol": "NASDAQ:MARA",

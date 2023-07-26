@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com 'unsafe-inline';">
     <style>
         * {
             margin: 0;
@@ -32,9 +33,9 @@
             line-height: 35px;
         }
 
-        .techLink:hover{
-            transform: scale(1.1);
-        }
+            .techLink:hover {
+                transform: scale(1.1);
+            }
 
         .trendingLink {
             display: inline-block;
@@ -46,7 +47,7 @@
             position: absolute;
             background: white;
             border: 2px solid black;
-            text-align:center;
+            text-align: center;
             left: 3%;
             bottom: 50%;
             width: 120px;
@@ -74,7 +75,7 @@
             width: 120px;
             height: 110px;
             z-index: 1;
-            line-height:35px;
+            line-height: 35px;
         }
 
             .cryptoLink:hover {
@@ -154,7 +155,7 @@
         }
 
         .color-key {
-            display:flex;
+            display: flex;
             position: absolute;
             background: transparent;
             margin-top: 640px;
@@ -216,6 +217,7 @@
             text-align: center;
             background: #E5E4E2;
         }
+
         .textGreen {
             width: 110px;
             margin: 0px 60px;
@@ -330,9 +332,9 @@
             z-index: 1;
         }
 
-        .buttonScroll:hover{
-            transform:scale(1.1);
-        }
+            .buttonScroll:hover {
+                transform: scale(1.1);
+            }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

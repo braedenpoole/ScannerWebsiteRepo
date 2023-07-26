@@ -4,22 +4,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script type="text/javascript">
-        new TradingView.widget({
-            "symbol": "NASDAQ:MARA",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "light",
-            "style": "1",
-            "locale": "en",
-            "toolbar_bg": "#f1f3f6",
-            "enable_publishing": false,
-            "allow_symbol_change": true,
-            "container_id": "tradingview_7807c",
-            "width": "800",
-            "height": "500"
-        });
-    </script>
     <style>
         * {
             margin: 0;
@@ -413,6 +397,22 @@
 
     <!-- TradingView Widget BEGIN -->
     <div class="tradingview-widget-container">
+        <script type="text/javascript">
+            new TradingView.widget({
+                "symbol": "NASDAQ:MARA",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_7807c",
+                "width": "800",
+                "height": "500"
+            });
+        </script>
         <div id="tradingview_7807c"></div>
         <div class="tradingview-widget-copyright">
             <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">

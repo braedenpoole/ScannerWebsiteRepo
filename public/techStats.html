@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
-    <script>const nonceValue = '<%= nonce %>'</script>
-    <script nonce="WPCrvm84tKbUcp7ERf7ROA==" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script nonce="WPCrvm84tKbUcp7ERf7ROA==" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script nonce="WPCrvm84tKbUcp7ERf7ROA==" type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <!-- Add the TradingView initialization script here -->
-    <script nonce="<%= nonce %>">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
         new TradingView.widget({
             "symbol": "NASDAQ:MARA",
             "interval": "D",

@@ -4,7 +4,6 @@ const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 4000;
-const crypto = require('crypto');
 
 let TechPrices = null;
 let cryptoData = null;
@@ -16,12 +15,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    const nonce = crypto.randomBytes(16).toString('base64');
     res.setHeader(
         'Content-Security-Policy',
-        `script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com 'nonce-${nonce}'`
+        "default-src 'self' https://api.coingecko.com https://finnhub.io; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
     );
-    res.locals.nonce = nonce;
     next();
 });
 

@@ -229,9 +229,7 @@ function fetchAndRefreshIndexPrices() {
 
 setTimeout(fetchAndRefreshIndexPrices, 120000);
 
-app.get('/', (req, res) => {
-    res.send('Welcome to BladeWebsite!'); // Or any other response you want to send
-});
+app.use(express.static('public'));
 
 app.get('/api/cryptodata', (req, res) => {
     res.json(cryptoData);

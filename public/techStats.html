@@ -440,7 +440,7 @@
 
             return `${roundedCap}${abbrev[magnitude]}`;
         }
-
+        
         function updateTechPrices() {
             axios.get('https://git.heroku.com/bladewebsite.git/api/TechPrices')
                 .then((response) => {

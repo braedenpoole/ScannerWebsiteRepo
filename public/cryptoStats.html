@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline';">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        new TradingView.widget({
+            "symbol": "NASDAQ:MARA",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_7807c",
+            "width": "800",
+            "height": "500"
+        });
+    </script>
     <style>
         * {
             margin: 0;
@@ -336,8 +355,6 @@
                 transform: scale(1.1);
             }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="index-stuff">
@@ -345,7 +362,7 @@
     </div>
     <div class="top-bar">
         <a href="index.html" target="_self" class="landingPageLink">Home</a><br />
-        <a href="projectDetails.html" target="_self" class="aboutPageLink">About</a>
+        <a href="projectDetails.html" target="_self" class="aboutPageLink">Project Details</a>
     </div>
     <div class="color-key">
         <div class="coloredBoxGreen">eee</div>
@@ -398,23 +415,6 @@
                 <span class="blue-text">Track all markets on TradingView</span>
             </a>
         </div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-            new TradingView.widget({
-                "symbol": "NASDAQ:MARA",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "light",
-                "style": "1",
-                "locale": "en",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_7807c",
-                "width": "800",
-                "height": "500"
-            });
-        </script>
         <br /><br />
     </div>
     <!-- TradingView Widget END -->

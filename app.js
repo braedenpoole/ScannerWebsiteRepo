@@ -226,7 +226,7 @@ function fetchAndRefreshIndexPrices() {
     setInterval(fetchIndexPrices, 300000);
 }
 
-setTimeout(fetchAndRefreshIndexPrices, 120000);
+setTimeout(fetchAndRefreshIndexPrices, 62000);
 
 app.use(express.static('public'));
 

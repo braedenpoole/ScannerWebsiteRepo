@@ -161,19 +161,19 @@
             display: flex;
             position: absolute;
             background: transparent;
-            bottom: 1.7%;
-            margin-left: 23%;
+            bottom: 3%;
+            left: 23%;
             z-index: 2;
         }
 
         .color-key-text {
             display: flex;
-            background: transparent;
             position: absolute;
             background: transparent;
-            margin-left: 8%;
+            bottom: 0%;
             font-size: 16px;
             z-index: 1;
+            left: 8%;
         }
 
         .coloredBoxGreen {
@@ -213,10 +213,9 @@
         }
 
         .keyMaster {
-            margin: 0px 20px;
+            margin: 0px 20px 15px;
             width: 100px;
             border: 2px solid black;
-            bottom: 2%;
             padding: 2px;
             text-align: center;
             background: #E5E4E2;
@@ -225,25 +224,21 @@
         .textGreen {
             width: 110px;
             margin: 0px 60px;
-            margin-top: 650px;
         }
 
         .textVeryGreen {
             width: 110px;
             margin: 0px 60px;
-            margin-top: 650px;
         }
 
         .textRed {
             width: 110px;
             margin: 0px 60px;
-            margin-top: 650px;
         }
 
         .textVeryRed {
             width: 110px;
             margin: 0px 60px;
-            margin-top: 650px;
         }
 
 
@@ -253,6 +248,7 @@
             grid-template-columns: 1fr 1fr 1fr; /* Four equal-width columns */
             justify-content: center;
             background: white;
+            padding-bottom: 500px;
         }
 
         .column {
@@ -613,7 +609,7 @@
         function scrollToNextPage() {
             const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
             window.scrollTo({
-                top: window.pageYOffset + viewportHeight,
+                top: window.pageYOffset + viewportHeight + 200,
                 behavior: 'smooth'
             });
         }

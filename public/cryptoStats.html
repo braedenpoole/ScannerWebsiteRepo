@@ -623,7 +623,7 @@
         function scrollToNextPage() {
             const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
             window.scrollTo({
-                top: window.pageYOffset + viewportHeight,
+                top: window.pageYOffset + viewportHeight + 200,
                 behavior: 'smooth'
             });
         }

@@ -454,8 +454,8 @@
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
-                            const change7d = stock.change_7d;
-                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            //const change7d = stock.change_7d;
+                            //const change30d = stock.change_30d; // Add this line to get the 30-day change
                             if (name == 'Amazon.com') {
                                 name = 'Amazon'
                             }
@@ -476,8 +476,8 @@
                             html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
                             html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
                             html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            //html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            //html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
                             html += `</div>`;
                         };
                         document.getElementById('tech-prices').innerHTML = html;
@@ -489,8 +489,8 @@
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
-                            const change7d = stock.change_7d;
-                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            //const change7d = stock.change_7d;
+                            //const change30d = stock.change_30d; // Add this line to get the 30-day change
 
                             // Check if the 24-hour change
                             const isNegativeChange = change24h < 0;
@@ -509,8 +509,8 @@
                             html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
                             html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
                             html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            //html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            //html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
                             html += `</div>`;
                         };
                         document.getElementById('ev-prices').innerHTML = html;
@@ -522,8 +522,8 @@
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
-                            const change7d = stock.change_7d;
-                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            //const change7d = stock.change_7d;
+                            //const change30d = stock.change_30d; // Add this line to get the 30-day change
                             if (name == 'Taiwan') {
                                 name = 'TSM Manufacturing';
                             }
@@ -547,8 +547,8 @@
                             html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
                             html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
                             html += `<div style="text-align:right;">24h: <strong>${change24h.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
-                            html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
+                            //html += `<div style="text-align:right;">7d: <strong>${change7d.toFixed(2)}%</strong></div>`;
+                            //html += `<div style="text-align:right;">30d: <strong>${change30d.toFixed(2)}%</strong></div>`; // Display the 30-day change
                             html += `</div>`;
                         };
                         document.getElementById('chip-prices').innerHTML = html;
@@ -580,8 +580,8 @@
                             const name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
-                            const change7d = stock.change_7d;
-                            const change30d = stock.change_30d; // Add this line to get the 30-day change
+                            //const change7d = stock.change_7d;
+                            //const change30d = stock.change_30d; // Add this line to get the 30-day change
                             if (change24h < 0) {
                                 html += '<div class="indexPrices-iBox red-bg">';
                             } else {

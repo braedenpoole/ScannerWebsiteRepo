@@ -187,7 +187,7 @@ async function fetchIndexPrices() {
             return {
                 symbol: symbol,
                 close: c,
-                //change_24h: change_24h,
+                change_24h: change_24h,
                 //change_7d: change_7d,
                 //change_30d: change_30d,
                 name: names[index],

@@ -56,7 +56,7 @@ async function fetchCryptoData() {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',
-                per_page: 8,
+                per_page: 9,
                 page: 1,
                 price_change_percentage: '1h,24h',
             },

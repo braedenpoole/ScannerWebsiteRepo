@@ -88,34 +88,6 @@ async function fetchTechPrices() {
             const { c, pc } = response.data; // Get the current price (c) and the previous close (pc)
             const change_24h = ((c - pc) / pc) * 100; // Calculate the 24-hour change in percentage
 
-            // Add code to fetch historical prices for 7 days and 30 days
-            //const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // 7 days ago
-            //const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000); // 30 days ago
-
-            //const historicalData = await axios.get('https://finnhub.io/api/v1/stock/candle', {
-            //    params: {
-            //        symbol: symbol,
-            //        resolution: 'D',
-             //       from: Math.floor(thirtyDaysAgo.getTime() / 1000),
-            //        to: Math.floor(Date.now() / 1000),
-            //        token: token,
-            //    },
-            //});
-
-            //const stockInfo = await axios.get('https://finnhub.io/api/v1/stock/profile2', {
-            //    params: {
-            //        symbol: symbol,
-            //        token: token,
-            //    },
-            //});
-
-            //const historicalPrices = historicalData.data.c;
-            //const previousClose7Days = historicalPrices[6]; // 7 days ago
-            //const previousClose30Days = historicalPrices[0]; // 30 days ago
-            //const name = stockInfo.data.name.split(' ')[0];
-            //const change_7d = ((c - previousClose7Days) / previousClose7Days) * 100; // Calculate the 7-day change in percentage
-            //const change_30d = ((c - previousClose30Days) / previousClose30Days) * 100; // Calculate the 30-day change in percentage
-
             return {
                 symbol: symbol,
                 close: c,
@@ -128,14 +100,6 @@ async function fetchTechPrices() {
         });
 
         TechPrices = await Promise.all(promises);
-
-        //TechPrices.forEach((stock) => {
-        //    console.log(
-        //        `${stock.name} ${stock.symbol} price: ${stock.close}, 24h change: ${stock.change_24h.toFixed(2)}%, 7d change: ${stock.change_7d.toFixed(
-        //            2
-        //        )}%, 30d change: ${stock.change_30d.toFixed(2)}%`
-        //    );
-        //});
 
         lastApiCallTime = new Date();
         console.log('Stock prices fetched and stored.');
@@ -163,26 +127,6 @@ async function fetchIndexPrices() {
 
             const { c, pc } = response.data; // Get the current price (c) and the previous close (pc)
             const change_24h = ((c - pc) / pc) * 100; // Calculate the 24-hour change in percentage
-            // Add code to fetch historical prices for 7 days and 30 days
-            //const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // 7 days ago
-            //const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000); // 30 days ago
-
-            //const historicalData = await axios.get('https://finnhub.io/api/v1/stock/candle', {
-            //    params: {
-            //        symbol: symbol,
-            //        resolution: 'D',
-            //        from: Math.floor(thirtyDaysAgo.getTime() / 1000),
-            //        to: Math.floor(Date.now() / 1000),
-            //        token: token,
-            //    },
-            //});
-
-            //const historicalPrices = historicalData.data.c;
-            //const previousClose7Days = historicalPrices[6]; // 7 days ago
-            //const previousClose30Days = historicalPrices[0]; // 30 days ago
-
-            //const change_7d = ((c - previousClose7Days) / previousClose7Days) * 100; // Calculate the 7-day change in percentage
-            //const change_30d = ((c - previousClose30Days) / previousClose30Days) * 100; // Calculate the 30-day change in percentage
 
             return {
                 symbol: symbol,
@@ -195,14 +139,6 @@ async function fetchIndexPrices() {
         });
 
         indexPrices = await Promise.all(promises);
-
-        //indexPrices.forEach((stock) => {
-        //    console.log(
-        //        `${stock.symbol} price: ${stock.close}, 24h change: ${stock.change_24h.toFixed(2)}%, 7d change: ${stock.change_7d.toFixed(
-        //            2
-        //        )}%, 30d change: ${stock.change_30d.toFixed(2)}%`
-        //    );
-        //});
 
         lastApiCallTime = new Date();
         console.log('Index prices fetched and stored.');

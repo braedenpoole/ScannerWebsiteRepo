@@ -1,0 +1,37 @@
+@media (min-width: 640px) {
+    .border-container {
+        width: 600px;
+        height: calc(600px / 1.78); /* Maintain 600:353 aspect ratio */
+    }
+}
+@media (max-width: 639px) {
+    .border-container {
+        width: 90%;
+        height: calc(90vw / 1.78); /* Maintain 600:353 aspect ratio */
+    }
+}
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>Scanner</title>
+
+    </head>
+
+    <body class="bg-white">
+        <div>
+            <!--Navbar-->
+            <div id="indicesBar" class="fixed top-0 w-screen justify-center flex items-center space-x-8 h-14 px-5 lg:px-0 drop-shadow-xl bg-black" style="z-index: 999;">
+                <!-- Navbar Logo and Hamburger Menu Icon -->
+                <div class="items-center">
+                    <div class="text-2xl text-white font-semibold hover:bg-gray-700">
+                        <a href="https://www.braedenpoole.com/cryptoStats.html" class="px-6 py-2 hover:bg-gray-700" target="_blank">Home</a>
+                    </div>
+                </div>
+                <!--Mobile Indicies-->
+                <div id="menu-toggle" class="block md:hidden">
+                    <button class="px-6 py-2 hover:bg-gray-700 font-semibold text-2xl">
+                        <div class="text-white font-semibold">Indices</div>
+                    </button>
+                </div>
+
+            
+                <!-- Index Prices Container -->
+                <div id="index-prices-container" class="hidden justify-end md:flex text-lg font-semibold md:space-x-3 lg:space-x-12 text-center pr-12">
+                    <!-- Index prices will be populated here -->
+                </div>
+            </div>
+
+            <div id="dropdown-index-container" class="pt-14 hidden justify-center w-full bg-black text-lg font-semibol text-center">
+                <!-- Index prices will be populated here -->
+            </div>
+        </div>
+
+
+
+        <script>
+            //Getting 'Indice' prices. These are not actually the indices, they are ETF's (Exchange Traded Funds) that are 1 to 1 in price to the indices.
+            function updateIndexPrices() {
+                axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/indexPrices')
+                    .then((response) => {
+                        const data = response.data;
+        
+                        if (data && Array.isArray(data)) {
+                            let html = '';
+                            data.forEach((stock) => {
+                                const symbol = stock.symbol;
+                                const name = stock.name;
+                                const price = stock.close;
+                                const change24h = stock.change_24h;
+        
+                                if (change24h < 0) {
+                                    html += '<div style="color:red;">';
+                                } else {
+                                    html += '<div style="color: #54C571;">';
+                                }
+                                
+                                html += `<div>${name} ${change24h.toFixed(2)}%</div>`;
+                                html += `</div>`;
+                            });
+        
+                            document.getElementById('index-prices-container').innerHTML = html; // Update the container with index data
+                            document.getElementById('dropdown-index-container').innerHTML = html; // Update the container with index data
+                        } else {
+                            document.getElementById('index-prices-container').innerText = 'Error retrieving index prices.';
+                            document.getElementById('dropdown-index-container').innerHTML = html; // Update the container with index data
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error retrieving index prices:', error);
+                        document.getElementById('index-prices-container').innerText = 'Error retrieving index prices.';
+                    });
+            }
+
+            //function for showing indicies on mobile
+            function toggleDropdown() {
+                const dropdownContainer = document.getElementById('dropdown-index-container');
+                dropdownContainer.classList.toggle('hidden');
+            }
+
+            // Function to hide dropdown when screen size is increased
+            function hideDropdownOnResize() {
+                const screenWidth = window.innerWidth;
+                if (screenWidth >= 640) {
+                    const dropdownContainer = document.getElementById('dropdown-index-container');
+                    dropdownContainer.classList.add('hidden');
+                }
+            }
+
+            updateIndexPrices()
+            document.getElementById('menu-toggle').addEventListener('click', toggleDropdown);
+            window.addEventListener('resize', hideDropdownOnResize); // Listen for screen size changes
+
+
+
+        </script>
+        
+
+
+    </body>
+</html>

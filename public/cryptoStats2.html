@@ -39,6 +39,32 @@
                 <!-- Index prices will be populated here -->
             </div>
         </div>
+        
+        <section id="topPage" class="h-screen w-screen bg-red-500 pt-14 flex justify-center items-center">
+            <div id="allBoxes" class="w-5/6 h-5/6 bg-blue-400 ">
+                  
+            </div>
+        </section>
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
 
 
 
@@ -94,6 +120,177 @@
                     dropdownContainer.classList.add('hidden');
                 }
             }
+
+
+
+
+
+            function updateCryptoPrices() {
+            axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/cryptodata')
+                .then((response) => {
+                    const data = response.data;
+
+                    if (Array.isArray(data) && data.length > 0) {
+                        let html = '';
+                        for (let i = 0; i < data.length; i++) {
+                            const coin = data[i];
+                            const name = coin.name;
+                            const symbol = coin.symbol.toUpperCase();
+                            const price = coin.current_price;
+                            const marketCap = coin.market_cap;
+                            const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                            const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+                            if (name === 'Tether' || name === 'USDC' || name === 'Lido Staked Ether' || name === 'BNB') {
+                                continue;
+                            }
+
+                            // Check if the price change is negative or positive
+                            const isNegativeChange24h = percentChange24h < 0;
+
+                            // Check if the 24-hour change is very negative or very positive
+                            const isVeryNegativeChange24h = percentChange24h < -3;
+                            const isVeryPositiveChange24h = percentChange24h > 3;
+                            if (isVeryNegativeChange24h) {
+                                html += `<div style="color: #E55451;">`;
+                            } else if (isVeryPositiveChange24h) {
+                                html += `<div style="color: #54C571">`;
+                            } else if(percentChange > 0){
+                                html += `<div style="color: #A0D6B4">`;
+                            } else{
+                                html += `<div style="color: #FFB8BF">`;
+                            }
+
+                            html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                            html += `<div><font size="+2"><strong>$${price.toFixed(2)}</strong></font></div>`
+                            html += `<div style="text-align:right;">24h: <strong>${percentChange24h}%</strong></div>`;
+                            html += `<div style="text-align:right;">1h: <strong>${percentChange1h}%</strong></div>`;
+                            html += `<div style="text-align:right;">Market Cap: <strong>$${formatMarketCap(marketCap)}</strong></div>`;
+                            html += '</div>';
+                        }
+                        document.getElementById('crypto-prices').innerHTML = html;
+                    } else {
+                        document.getElementById('crypto-prices').innerText = 'Error retrieving cryptocurrency prices.';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error retrieving cryptocurrency data:', error);
+                    document.getElementById('crypto-prices').innerText = 'Error retrieving cryptocurrency prices.';
+                });
+            }
+
+
+
+
+            function formatMarketCap(cap) {
+                const abbrev = ['', 'K', 'M', 'B', 'T']; // Add more abbreviations as needed
+                const decimals = 2;
+
+                const magnitude = Math.floor(Math.log10(cap) / 3);
+                const roundedCap = (cap / Math.pow(1000, magnitude)).toFixed(decimals);
+
+                return `${roundedCap}${abbrev[magnitude]}`;
+            }
+
+
+
+
+            function updateTopCryptoPrices() {
+                axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/topCryptoData')
+                    .then((response) => {
+                        const data = response.data;
+
+                        if (Array.isArray(data) && data.length > 0) {
+                            // Sort the data based on the percentage change in the last 24 hours
+                            data.sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h);
+                            // Take the top 10 cryptocurrencies
+                            const top10Data = data.slice(0, 5);
+                            data.sort((b, a) => b.price_change_percentage_24h - a.price_change_percentage_24h);
+                            const worst10Data = data.slice(0, 5);
+
+
+                            let html = '';
+
+                            for (let i = 0; i < top10Data.length; i++) {
+                                const coin = top10Data[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                const isNegativeChange = percentChange24h < 0;
+
+                                // Add veryRed-bg or veryGreen-bg classes for changes greater than 3%
+                                const isVeryNegativeChange = percentChange24h < -3;
+                                const isVeryPositiveChange = percentChange24h > 3;
+                                if (isVeryNegativeChange24h) {
+                                html += `<div style="color: #E55451;">`;
+                            } else if (isVeryPositiveChange24h) {
+                                html += `<div style="color: #54C571">`;
+                            } else if(percentChange > 0){
+                                html += `<div style="color: #A0D6B4">`;
+                            } else{
+                                html += `<div style="color: #FFB8BF">`;
+                            }
+
+                                html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                                html += `<div><strong><font size="+2">$${price.toFixed(2)}</font></strong></div>`;
+                                html += `<div style="text-align:right;">24h: <strong>${percentChange24h}%</strong></div>`;
+                                html += `<div style="text-align:right;">1h: <strong>${percentChange1h}%</strong></div>`;
+                                html += `<div style="text-align:right;">Market Cap: <strong>$${formatMarketCap(marketCap)}</strong></div>`;
+                                html += `</div>`;
+                            }
+                            document.getElementById('top-crypto-prices').innerHTML = html;
+                            //clear html
+                            html = '';
+
+                            for (let i = 0; i < worst10Data.length; i++) {
+                                const coin = worst10Data[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                const isNegativeChange = percentChange24h < 0;
+                                const bgClass = isNegativeChange ? 'red-bg' : 'green-bg';
+
+                                // Add veryRed-bg or veryGreen-bg classes for changes greater than 3%
+                                const isVeryNegativeChange = percentChange24h < -3;
+                                const isVeryPositiveChange = percentChange24h > 3;
+                                if (isVeryNegativeChange) {
+                                    html += `<div class="worstCryptoPrices-box veryRed-bg">`;
+                                } else if (isVeryPositiveChange) {
+                                    html += `<div class="worstCryptoPrices-box veryGreen-bg">`;
+                                } else {
+                                    html += `<div class="worstCryptoPrices-box ${bgClass}">`;
+                                }
+
+                                html += `<div><font size="+1"><strong>${name} </strong></font>${symbol}</div>`;
+                                html += `<div><strong><font size="+2">$${price.toFixed(2)}</font></strong></div>`;
+                                html += `<div style="text-align:right;">24h: <strong>${percentChange24h}%</strong></div>`;
+                                html += `<div style="text-align:right;">1h: <strong>${percentChange1h}%</strong></div>`;
+                                html += `<div style="text-align:right;">Market Cap: <strong>$${formatMarketCap(marketCap)}</strong></div>`;
+                                html += `</div>`;
+                            }
+                            document.getElementById('worst-crypto-prices').innerHTML = html;
+
+
+
+                        } else {
+                            document.getElementById('top-crypto-prices').innerText = 'Error retrieving cryptocurrency prices.';
+                            document.getElementById('worst-crypto-prices').innerText = 'Error retreiving cryptocurrency prices.';
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error retrieving top cryptocurrency data:', error);
+                        document.getElementById('top-crypto-prices').innerText = 'Error retrieving cryptocurrency prices.';
+                        document.getElementById('worst-crypto-prices').innerText = 'Error retreiving cryptocurrency prices.';
+                    });
+            }
+
 
             updateIndexPrices()
             document.getElementById('menu-toggle').addEventListener('click', toggleDropdown);

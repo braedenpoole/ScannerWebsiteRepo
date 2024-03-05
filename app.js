@@ -85,17 +85,16 @@ async function fetchTechPrices() {
                 },
             });
 
-            const { c, pc } = response.data; // Get the current price (c) and the previous close (pc)
+            const { c, pc, h, l } = response.data;
             const change_24h = ((c - pc) / pc) * 100; // Calculate the 24-hour change in percentage
-
             return {
                 symbol: symbol,
                 close: c,
                 change_24h: change_24h,
                 name: names[stockName],
-                //change_7d: change_7d,
-                //change_30d: change_30d,
-                //name: name,
+                hod: h,
+                lod: l,
+
             };
         });
 

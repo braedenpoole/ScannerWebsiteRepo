@@ -40,7 +40,7 @@
             </div>
         </div>
         
-        <section id="topPage" class="h-screen w-screen overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
+        <section id="topPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
         
             <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
                 <div class=" overflow-auto grid-cols-9 gap-6 flex w-full h-full p-3">
@@ -135,6 +135,44 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <!-- TradingView Widget BEGIN -->
+            <div class="pr-8 pl-8 md:pr-36 md:pl-36 lg:pr-72 lg:pl-72 pt-12 pb-6">
+                <div class="text-xl font-bold pb-6 text-center">Check Out Other Stocks!</div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">Track all markets on TradingView</span>
+                    </a>
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "symbol": "NASDAQ:MARA",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "light",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "width": "full",
+                        "height": "500"
+                    });
+                </script>
+                <br /><br />
+            </div>
+        </section>
+
+        <section>
+            <div class="w-full h-24 flex items-center justify-center bg-black">
+                <div class="text-white text-xl font-semibold text-center">
+                    Crypto data brought to you by CoinGecko | Stock data brought to you by Finnhub
+                </div>
+            </div>
+        </section>
+        
         
         
         

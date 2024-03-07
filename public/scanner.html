@@ -41,13 +41,13 @@
             </div>
         </div>
         
+        <!--First Container for Crypto Boxes-->
         <section id="topPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
-        
             <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
-                <div class=" overflow-auto grid-cols-9 gap-6 flex w-full h-full p-3">
+                <div class=" overflow-auto grid-cols-10 gap-6 flex w-full h-full p-3">
                     <!-- Column 1 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Crypto By Market Cap</div>
+                        <div class="pb-1 font-semibold text-lg">Top Market Cap</div>
                         <div id="mc1" class=""></div>
                         <div id="mc2" class=""></div>
                         <div id="mc3" class=""></div>
@@ -57,7 +57,7 @@
 
                     <!-- Column 2 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Crypto by 24h Gain</div>
+                        <div class="pb-1 font-semibold text-lg">Largest 24h Gain</div>
                         <div id="g1" class=""></div>
                         <div id="g2" class=""></div>
                         <div id="g3" class=""></div>
@@ -66,8 +66,8 @@
                     </div>
 
                     <!-- Column 3 -->
-                    <div class="flex flex-col space-y-1 text-center pr-5">
-                        <div class="pb-1 font-semibold text-lg">Crypto by 24h Loss</div>
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Largest 24h Loss</div>
                         <div id="l1" class=""></div>
                         <div id="l2" class=""></div>
                         <div id="l3" class=""></div>
@@ -77,6 +77,85 @@
 
                     <!-- Column 4 -->
                     <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Largest 1h Gain</div>
+                        <div id="lg1" class=""></div>
+                        <div id="lg2" class=""></div>
+                        <div id="lg3" class=""></div>
+                        <div id="lg4" class=""></div>
+                        <div id="lg5" class=""></div>
+                    </div>
+
+                    <!-- Column 5 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Largest 1h Loss</div>
+                        <div id="ll1" class=""></div>
+                        <div id="ll2" class=""></div>
+                        <div id="ll3" class=""></div>
+                        <div id="ll4" class=""></div>
+                        <div id="ll5" class=""></div>
+                    </div>  
+                    
+                    <!-- Column 6 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top AI</div>
+                        <div id="ai1" class=""></div><!--Tao-->
+                        <div id="ai2" class=""></div><!--Rndr-->
+                        <div id="ai3" class=""></div><!--Fet-->
+                        <div id="ai4" class=""></div><!--Agix-->
+                        <div id="ai5" class=""></div><!--Akt-->
+                    </div>
+
+                    <!-- Column 7 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top Meme</div>
+                        <div id="m1" class=""></div><!--Doge-->
+                        <div id="m2" class=""></div><!--Shiba-->
+                        <div id="m3" class=""></div><!--Pepe-->
+                        <div id="m4" class=""></div><!--Bonk-->
+                        <div id="m5" class=""></div><!--dogwifhat-->
+                    </div>
+
+                    <!-- Column 8 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top Gaming</div>
+                        <div id="tg1" class=""></div><!--IMX-->
+                        <div id="tg2" class=""></div><!--Beam-->
+                        <div id="tg3" class=""></div><!--Sand-->
+                        <div id="tg4" class=""></div><!--Gala-->
+                        <div id="tg5" class=""></div><!--Axs-->
+                    </div>
+                    
+                    <!-- Column 9 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top DeFi</div>
+                        <div id="df1" class=""></div><!--Uniswap-->
+                        <div id="df2" class=""></div><!--Chainlink-->
+                        <div id="df3" class=""></div><!--Dai-->
+                        <div id="df4" class=""></div><!--The Graph-->
+                        <div id="df5" class=""></div><!--SNX-->
+                    </div>
+
+                    <!-- Column 10 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top Layer 2's</div>
+                        <div id="tl1" class=""></div><!--Polygon-->
+                        <div id="tl2" class=""></div><!--Optimism-->
+                        <div id="tl3" class=""></div><!--Mantle-->
+                        <div id="tl4" class=""></div><!--Arbitrum-->
+                        <div id="tl5" class=""></div><!--Starknet-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Second Container for Stock Market Boxes-->
+        <section id="secondPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
+        
+            <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
+                <div class=" overflow-auto grid-cols-9 gap-6 flex w-full h-full p-3">
+                    <!-- Column 1 -->
+                    <div class="flex flex-col space-y-1 text-center">
                         <div class="pb-1 font-semibold text-lg">Diverse Sectors</div>
                         <div id="d1" class=""></div>
                         <div id="d2" class=""></div>
@@ -85,7 +164,7 @@
                         <div id="d5" class=""></div>
                     </div>
 
-                    <!-- Column 5 -->
+                    <!-- Column 2 -->
                     <div class="flex flex-col space-y-1 text-center">
                         <div class="pb-1 font-semibold text-lg">Recent Hot Stocks</div>
                         <div id="h1" class=""></div>
@@ -95,7 +174,7 @@
                         <div id="h5" class=""></div>
                     </div>
 
-                    <!-- Column 6 -->
+                    <!-- Column 3 -->
                     <div class="flex flex-col space-y-1 text-center pr-5">
                         <div class="pb-1 font-semibold text-lg">Top Trending</div>
                         <div id="t1" class=""></div>
@@ -105,7 +184,7 @@
                         <div id="t5" class=""></div>
                     </div>
 
-                    <!-- Column 7 -->
+                    <!-- Column 4 -->
                     <div class="flex flex-col space-y-1 text-center">
                         <div class="pb-1 font-semibold text-lg">Top Tech</div>
                         <div id="tt1" class=""></div>
@@ -115,7 +194,7 @@
                         <div id="tt5" class=""></div>
                     </div>
 
-                    <!-- Column 8 -->
+                    <!-- Column 5 -->
                     <div class="flex flex-col space-y-1 text-center">
                         <div class="pb-1 font-semibold text-lg">Top EV</div>
                         <div id="te1" class=""></div>
@@ -124,7 +203,7 @@
                         <div id="te4" class=""></div>
                         <div id="te5" class=""></div>
                     </div>
-
+                    <!-- Column 6 -->
                     <div class="flex flex-col space-y-1 text-center">
                         <div class="pb-1 font-semibold text-lg">Top Chip Makers</div>
                         <div id="tc1" class=""></div>
@@ -136,6 +215,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <section>
             <!-- TradingView Widget BEGIN -->
@@ -316,8 +397,370 @@
                             // Take the top 10 cryptocurrencies
                             const top5Data = data.slice(0, 5);
                             data.sort((b, a) => b.price_change_percentage_24h - a.price_change_percentage_24h);
-                            const worst5Data = data.slice(0, 5);
+                            const worst5Data = data.slice(0, 5);             
+
+                            data.sort((a, b) => b.price_change_percentage_1h - a.price_change_percentage_1h);
+                            // Take the top 10 cryptocurrencies
+                            const hourtop5Data = data.slice(0, 5);
+                            data.sort((b, a) => b.price_change_percentage_1h - a.price_change_percentage_1h);
+                            const hourworst5Data = data.slice(0, 5);
                             
+                            let defi = Array(5);
+                            let meme = Array(5);
+                            let layerTwos = Array(5);
+                            let gaming = Array(5);
+                            let ai = Array(5);
+                            //iterate and populate
+                            for(let i = 0; i < data.length; i++){
+                                let val = data[i];
+                                //defi
+                                if(val.name === "Uniswap"){
+                                    defi[0] = val;
+                                }                                
+                                if(val.name === "Chainlink"){
+                                    defi[1] = val;
+                                }                                
+                                if(val.name === "Dai"){
+                                    defi[2] = val;
+                                }                               
+                                if(val.name === "The Graph"){
+                                    defi[3] = val;
+                                }                                
+                                if(val.name === "Synthetix Network"){
+                                    defi[4] = val;
+                                }
+                                //meme
+                                if(val.name === "Dogecoin"){
+                                    meme[0] = val;
+                                }                                
+                                if(val.name === "Shiba Inu"){
+                                    meme[1] = val;
+                                }                                
+                                if(val.name === "Pepe"){
+                                    meme[2] = val;
+                                }                                
+                                if(val.name === "Bonk"){
+                                    meme[3] = val;
+                                }                                
+                                if(val.name === "dogwifhat"){
+                                    meme[4] = val;
+                                }
+                                //layerTwos
+                                if(val.name === "Polygon"){
+                                    layerTwos[0] = val;
+                                }                                
+                                if(val.name === "Optimism"){
+                                    layerTwos[1] = val;
+                                }                                
+                                if(val.name === "Mantle"){
+                                    layerTwos[2] = val;
+                                }                                
+                                if(val.name === "Arbitrum"){
+                                    layerTwos[3] = val;
+                                }                                
+                                if(val.name === "Starknet"){
+                                    layerTwos[4] = val;
+                                }
+                                //gaming
+                                if(val.name === "Immutable"){
+                                    gaming[0] = val;
+                                }                                
+                                if(val.name === "Beam"){
+                                    gaming[1] = val;
+                                }                                
+                                if(val.name === "The Sandbox"){
+                                    gaming[2] = val;
+                                }                                
+                                if(val.name === "GALA"){
+                                    gaming[3] = val;
+                                }                                
+                                if(val.name === "Axie Infinity"){
+                                    gaming[4] = val;
+                                }
+                                //ai
+                                if(val.name === "Bittensor"){
+                                    ai[0] = val;
+                                }                                
+                                if(val.name === "Render"){
+                                    ai[1] = val;
+                                }                                
+                                if(val.name === "Fetch.ai"){
+                                    ai[2] = val;
+                                }                                
+                                if(val.name === "SingularityNET"){
+                                    ai[3] = val;
+                                }                                
+                                if(val.name === "Akash Network"){
+                                    ai[4] = val;
+                                }
+                            }
+
+                            //defi loop
+                            for (let i = 0; i < defi.length; i++) {
+                                const coin = defi[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`df${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
+
+                            //meme loop
+                            for (let i = 0; i < meme.length; i++) {
+                                const coin = meme[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`m${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+                        
+                            //layerTwo's loop
+                            for (let i = 0; i < layerTwos.length; i++) {
+                                const coin = layerTwos[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`tl${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
+                            //Gaming loop
+                            for (let i = 0; i < gaming.length; i++) {
+                                const coin = gaming[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`tg${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
+                            //ai loop
+                            for (let i = 0; i < ai.length; i++) {
+                                const coin = ai[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`ai${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
                             for (let i = 0; i < top5Data.length; i++) {
                                 const coin = top5Data[i];
                                 const name = coin.name;
@@ -368,6 +811,113 @@
                                 count++;
                             }
                             count = 0;
+
+                            //Largest hour gain loop
+                            for (let i = 0; i < hourtop5Data.length; i++) {
+                                const coin = hourtop5Data[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`lg${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
+                            //Largest hour loss loop
+                            for (let i = 0; i < hourworst5Data.length; i++) {
+                                const coin = hourworst5Data[i];
+                                const name = coin.name;
+                                const symbol = coin.symbol.toUpperCase();
+                                const price = coin.current_price;
+                                const marketCap = coin.market_cap;
+                                const percentChange1h = coin.price_change_percentage_1h_in_currency.toFixed(2);
+                                const percentChange24h = coin.price_change_percentage_24h_in_currency.toFixed(2);
+
+                                // Get the appropriate div element for the current cryptocurrency
+                                const cryptoBox = document.getElementById(`ll${count + 1}`); // Update the ID to match the box IDs
+                                let color = "";
+
+                                if (percentChange24h < -3) {
+                                   color += "E55451";
+                                } else if (percentChange24h > 3) {
+                                    color += "54C571";
+                                } else if(percentChange24h > 0){
+                                    color += "A0D6B4";
+                                } else{
+                                    color += "FFB8BF";
+                                }
+
+                                let size = "text-lg";
+                                if(name.length + symbol.length + 1 > 13){
+                                    size = "text-md";
+                                } if(name.length + symbol.length + 1 > 26){
+                                    size = "text-sm";
+                                }
+
+                                // Check if the box exists before updating its content
+                                if (cryptoBox) {
+                                    let html = '';
+                                    html += `
+                                        <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                            <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                                <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                                <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                            </div>
+                                            <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                                <div>24h: <strong>${percentChange24h}%</strong></div>
+                                                <div>1h: <strong>${percentChange1h}%</strong></div>
+                                                <div>Market Cap: <strong>${formatMarketCap(marketCap)}</strong></div>
+                                            </div>
+                                        </div>`;
+                                    cryptoBox.innerHTML = html;
+                                }
+                                count++;
+                            }
+
+                            count = 0;
+
                             for (let i = 0; i < worst5Data.length; i++) {
                                 const coin = worst5Data[i];
                                 const name = coin.name;

@@ -72,8 +72,8 @@ async function fetchCryptoData() {
 }
 
 async function fetchTechPrices() {
-    const symbols = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'META', 'TSLA', 'LCID', 'RIVN', 'NIO', 'NKLA', 'NVDA', 'AMD', 'INTC', 'TSM', 'QCOM', 'XOM', 'WMT', 'JPM', 'UNH', 'ORCL', 'GFAI', 'MARA', 'AI', 'AMC', 'CVNA', 'V', 'ETSY', 'SHOP', 'DIS', 'NFLX'];
-    const names = ['Apple', 'Microsoft', 'Google', 'Amazon', 'Meta', 'Tesla', 'Lucid', 'Rivian', 'NIO', 'Nikola', 'Nvidia', 'AMD', 'Intel', 'Taiwan SemiConductor', 'Qualcomm', 'Exxon', 'Walmart', 'JPMorgan', 'UnitedHealth', 'Oracle', 'Guardforce AI', 'Marathon Digital', 'C3.ai', 'AMC', 'Carvana', 'Visa', 'Etsy', 'Shopify', 'Disney', 'Netflix']
+    const symbols = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'META', 'TSLA', 'LCID', 'RIVN', 'NIO', 'NKLA', 'NVDA', 'AMD', 'INTC', 'TSM', 'QCOM', 'MARA', 'CLSK', 'RIOT', 'CIFR', 'BITF', 'PLTR', 'IBM', 'AI', 'CRWD', 'SOUN', 'XOM', 'SHEL', 'COP', 'NEE', 'BP', 'JPM', 'BAC', 'WFC', 'MS', 'GS', 'UNH', 'ELV', 'CI', 'CVS', 'HCA'];
+    const names = ['Apple', 'Microsoft', 'Google', 'Amazon', 'Meta', 'Tesla', 'Lucid', 'Rivian', 'NIO', 'Nikola', 'Nvidia', 'AMD', 'Intel', 'Taiwan SemiConductor', 'Qualcomm', 'Marathon Digital', 'Cleanspark', 'Riot Platforms', 'Cipher Mining', 'Bitfarms', 'Palantir', 'IBM', 'C3.ai', 'Crowdstrike', 'SoundHound AI', 'Exxon Mobil', 'Shell', 'ConocoPhillips', 'NextEra Energy', 'BP', 'JPMorgan Chase & Co', 'Bank of America', 'Wells Fargo', 'Morgan Stanley', 'Goldman Sachs', 'UnitedHealth Group', 'Elevance Health', 'Cigna Group', 'CVS Health', 'HCA Healthcare'];
     const token = 'ciqtjq9r01qjff7cukf0ciqtjq9r01qjff7cukfg';
 
     try {

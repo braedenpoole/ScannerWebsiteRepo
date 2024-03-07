@@ -153,64 +153,82 @@
         <section id="secondPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
         
             <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
-                <div class=" overflow-auto grid-cols-9 gap-6 flex w-full h-full p-3">
+                <div class=" overflow-auto grid-cols-8 gap-6 flex w-full h-full p-3">
                     <!-- Column 1 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Diverse Sectors</div>
-                        <div id="d1" class=""></div>
-                        <div id="d2" class=""></div>
-                        <div id="d3" class=""></div>
-                        <div id="d4" class=""></div>
-                        <div id="d5" class=""></div>
+                        <div class="pb-1 font-semibold text-lg">Top Tech</div>
+                        <div id="toptech1" class=""></div>
+                        <div id="toptech2" class=""></div>
+                        <div id="toptech3" class=""></div>
+                        <div id="toptech4" class=""></div>
+                        <div id="toptech5" class=""></div>
                     </div>
 
                     <!-- Column 2 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Recent Hot Stocks</div>
-                        <div id="h1" class=""></div>
-                        <div id="h2" class=""></div>
-                        <div id="h3" class=""></div>
-                        <div id="h4" class=""></div>
-                        <div id="h5" class=""></div>
+                        <div class="pb-1 font-semibold text-lg">Top EV</div>
+                        <div id="ev1" class=""></div>
+                        <div id="ev2" class=""></div>
+                        <div id="ev3" class=""></div>
+                        <div id="ev4" class=""></div>
+                        <div id="ev5" class=""></div>
                     </div>
 
                     <!-- Column 3 -->
                     <div class="flex flex-col space-y-1 text-center pr-5">
-                        <div class="pb-1 font-semibold text-lg">Top Trending</div>
-                        <div id="t1" class=""></div>
-                        <div id="t2" class=""></div>
-                        <div id="t3" class=""></div>
-                        <div id="t4" class=""></div>
-                        <div id="t5" class=""></div>
+                        <div class="pb-1 font-semibold text-lg">Top Chip Makers</div>
+                        <div id="cm1" class=""></div>
+                        <div id="cm2" class=""></div>
+                        <div id="cm3" class=""></div>
+                        <div id="cm4" class=""></div>
+                        <div id="cm5" class=""></div>
                     </div>
 
                     <!-- Column 4 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Top Tech</div>
-                        <div id="tt1" class=""></div>
-                        <div id="tt2" class=""></div>
-                        <div id="tt3" class=""></div>
-                        <div id="tt4" class=""></div>
-                        <div id="tt5" class=""></div>
+                        <div class="pb-1 font-semibold text-lg">Top Crypto Miners</div>
+                        <div id="miner1" class=""></div>
+                        <div id="miner2" class=""></div>
+                        <div id="miner3" class=""></div>
+                        <div id="miner4" class=""></div>
+                        <div id="miner5" class=""></div>
                     </div>
 
                     <!-- Column 5 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Top EV</div>
+                        <div class="pb-1 font-semibold text-lg">Top AI</div>
+                        <div id="aistock1" class=""></div>
+                        <div id="aistock2" class=""></div>
+                        <div id="aistock3" class=""></div>
+                        <div id="aistock4" class=""></div>
+                        <div id="aistock5" class=""></div>
+                    </div>
+                    <!-- Column 6 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top Energy</div>
                         <div id="te1" class=""></div>
                         <div id="te2" class=""></div>
                         <div id="te3" class=""></div>
                         <div id="te4" class=""></div>
                         <div id="te5" class=""></div>
                     </div>
-                    <!-- Column 6 -->
+                    <!-- Column 7 -->
                     <div class="flex flex-col space-y-1 text-center">
-                        <div class="pb-1 font-semibold text-lg">Top Chip Makers</div>
-                        <div id="tc1" class=""></div>
-                        <div id="tc2" class=""></div>
-                        <div id="tc3" class=""></div>
-                        <div id="tc4" class=""></div>
-                        <div id="tc5" class=""></div>
+                        <div class="pb-1 font-semibold text-lg">Top Banking</div>
+                        <div id="tb1" class=""></div>
+                        <div id="tb2" class=""></div>
+                        <div id="tb3" class=""></div>
+                        <div id="tb4" class=""></div>
+                        <div id="tb5" class=""></div>
+                    </div>
+                    <!-- Column 8 -->
+                    <div class="flex flex-col space-y-1 text-center">
+                        <div class="pb-1 font-semibold text-lg">Top Health</div>
+                        <div id="th1" class=""></div>
+                        <div id="th2" class=""></div>
+                        <div id="th3" class=""></div>
+                        <div id="th4" class=""></div>
+                        <div id="th5" class=""></div>
                     </div>
                 </div>
             </div>
@@ -390,6 +408,7 @@
                 axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/topCryptoData')
                     .then((response) => {
                         const data = response.data;
+                        const testdata = response.data;
                         let count = 0;
                         if (Array.isArray(data) && data.length > 0) {
                             // Sort the data based on the percentage change in the last 24 hours
@@ -398,12 +417,9 @@
                             const top5Data = data.slice(0, 5);
                             data.sort((b, a) => b.price_change_percentage_24h - a.price_change_percentage_24h);
                             const worst5Data = data.slice(0, 5);             
-
-                            data.sort((a, b) => b.price_change_percentage_1h - a.price_change_percentage_1h);
-                            // Take the top 10 cryptocurrencies
-                            const hourtop5Data = data.slice(0, 5);
-                            data.sort((b, a) => b.price_change_percentage_1h - a.price_change_percentage_1h);
-                            const hourworst5Data = data.slice(0, 5);
+                            testdata.sort((b, a) => a.price_change_percentage_1h_in_currency - b.price_change_percentage_1h_in_currency);
+                            const hourtop5Data = testdata.slice(0, 5);
+                            const hourworst5Data = testdata.slice(-5);
                             
                             let defi = Array(5);
                             let meme = Array(5);
@@ -826,11 +842,11 @@
                                 const cryptoBox = document.getElementById(`lg${count + 1}`); // Update the ID to match the box IDs
                                 let color = "";
 
-                                if (percentChange24h < -3) {
+                                if (percentChange1h < -3) {
                                    color += "E55451";
-                                } else if (percentChange24h > 3) {
+                                } else if (percentChange1h > 3) {
                                     color += "54C571";
-                                } else if(percentChange24h > 0){
+                                } else if(percentChange1h > 0){
                                     color += "A0D6B4";
                                 } else{
                                     color += "FFB8BF";
@@ -879,11 +895,11 @@
                                 const cryptoBox = document.getElementById(`ll${count + 1}`); // Update the ID to match the box IDs
                                 let color = "";
 
-                                if (percentChange24h < -3) {
+                                if (percentChange1h < -3) {
                                    color += "E55451";
-                                } else if (percentChange24h > 3) {
+                                } else if (percentChange1h > 3) {
                                     color += "54C571";
-                                } else if(percentChange24h > 0){
+                                } else if(percentChange1h > 0){
                                     color += "A0D6B4";
                                 } else{
                                     color += "FFB8BF";
@@ -977,28 +993,32 @@
             }
 
 
-            function updateTrendingPrices() {
+            function updateStockPrices() {
             axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/TechPrices')
                 .then((response) => {
                     const data = response.data;
                     let count = 0;
                     if (data && Array.isArray(data)) {
-
-                        const diverseStocks = data.slice(15, 20);
-                        const hotStocks = data.slice(20, 25);
-                        const trendingStocks = data.slice(25, 30);
-
+                        const topTech = data.slice(0, 5);
+                        const topEV = data.slice(5, 10);
+                        const topChip = data.slice(10, 15);
+                        const topCryptoMiners = data.slice(15, 20);
+                        const topAI = data.slice(20, 25);
+                        const topEnergy = data.slice(25, 30);
+                        const topBanking = data.slice(30, 35);
+                        const topHealth = data.slice(35, 40);
 
                         let html = '';
-                        for (let i = 0; i < diverseStocks.length; i++) {
-                            const stock = diverseStocks[i];
+                        //tech
+                        for (let i = 0; i < topTech.length; i++) {
+                            const stock = topTech[i];
                             const symbol = stock.symbol.toUpperCase();
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
                             const hod = stock.hod;
                             const lod = stock.lod;
-                            const stockBox = document.getElementById(`d${count + 1}`);
+                            const stockBox = document.getElementById(`toptech${count + 1}`);
 
                             let color = "";
 
@@ -1041,15 +1061,68 @@
                         };
                         count = 0;
 
-                        for (let i = 0; i < hotStocks.length; i++) {
-                            const stock = hotStocks[i];
+                        //ev
+                        for (let i = 0; i < topEV.length; i++) {
+                            const stock = topEV[i];
                             const symbol = stock.symbol.toUpperCase();
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
                             const hod = stock.hod;
                             const lod = stock.lod;
-                            const stockBox = document.getElementById(`h${count + 1}`);
+                            const stockBox = document.getElementById(`ev${count + 1}`);
+
+                            let color = "";
+
+                            if (change24h < -3) {
+                            color += "E55451";
+                            } else if (change24h > 3) {
+                                color += "54C571";
+                            } else if(change24h > 0){
+                                color += "A0D6B4";
+                            } else{
+                                color += "FFB8BF";
+                            }
+
+                            let size = "text-lg";
+                            if(name.length + symbol.length + 1 > 13){
+                                size = "text-md";
+                            }
+                            if(name.length + symbol.length + 1 > 26){
+                                size = "text-sm";
+                            }
+
+                            // Check if the box exists before updating its content
+                            if (stockBox) {
+                                let html = '';
+                                html += `
+                                    <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                        <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                            <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                            <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                        </div>
+                                        <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                            <div>24h: <strong>${change24h.toFixed(2)}%</strong></div>
+                                            <div>Daily High: <strong>$${hod.toFixed(2)}</strong></div>
+                                            <div>Daily Low: <strong>$${lod.toFixed(2)}</strong></div>
+                                        </div>
+                                    </div>`;
+                                stockBox.innerHTML = html;
+                            }
+                            count++;
+                        };
+                        count = 0;
+                        
+                        //chip
+                        for (let i = 0; i < topChip.length; i++) {
+                            const stock = topChip[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const hod = stock.hod;
+                            const lod = stock.lod;
+                            const stockBox = document.getElementById(`cm${count + 1}`);
 
                             let color = "";
 
@@ -1092,89 +1165,16 @@
                         };
                         count = 0;
 
-                        for (let i = 0; i < trendingStocks.length; i++) {
-                            const stock = trendingStocks[i];
+                        //crypto miners
+                        for (let i = 0; i < topCryptoMiners.length; i++) {
+                            const stock = topCryptoMiners[i];
                             const symbol = stock.symbol.toUpperCase();
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
                             const hod = stock.hod;
                             const lod = stock.lod;
-                            const stockBox = document.getElementById(`t${count + 1}`);
-
-                            let color = "";
-
-                            if (change24h < -3) {
-                            color += "E55451";
-                            } else if (change24h > 3) {
-                                color += "54C571";
-                            } else if(change24h > 0){
-                                color += "A0D6B4";
-                            } else{
-                                color += "FFB8BF";
-                            }
-
-                            let size = "text-lg";
-                            if(name.length + symbol.length + 1 > 13){
-                                size = "text-md";
-                            }
-                            if(name.length + symbol.length + 1 > 26){
-                                size = "text-sm";
-                            }
-
-                            // Check if the box exists before updating its content
-                            if (stockBox) {
-                                let html = '';
-                                html += `
-                                    <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
-                                        <div class="flex flex-col w-1/2 h-full items-start justify-center">
-                                            <div class="${size}"><strong>${name}</strong> ${symbol}</div>
-                                            <div class="font-bold text-xl">$${price.toFixed(2)}</div>
-                                        </div>
-                                        <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
-                                            <div>24h: <strong>${change24h.toFixed(2)}%</strong></div>
-                                            <div>Daily High: <strong>$${hod.toFixed(2)}</strong></div>
-                                            <div>Daily Low: <strong>$${lod.toFixed(2)}</strong></div>
-                                        </div>
-                                    </div>`;
-                                stockBox.innerHTML = html;
-                            }
-                            count++;
-                        };
-                    } else {
-                        console.error('Error retrieving trending prices.');
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error retrieving trending prices:', error);
-                });
-            }
-
-            function updateTechPrices() {
-            axios.get('https://bladewebsite-99f6caf250e5.herokuapp.com/api/TechPrices')
-                .then((response) => {
-                    const data = response.data;
-
-                    if (data && Array.isArray(data)) {
-
-                        const techStocks = data.slice(0, 5);
-                        const evStocks = data.slice(5, 10);
-                        const chipStocks = data.slice(10, 15);
-
-                        let count = 0;
-                        let html = '';
-                        for (let i = 0; i < techStocks.length; i++) {
-                            const stock = techStocks[i];
-                            const symbol = stock.symbol.toUpperCase();
-                            let name = stock.name;
-                            if (name == 'Amazon.com') {
-                                name = 'Amazon'
-                            }
-                            const price = stock.close;
-                            const change24h = stock.change_24h;
-                            const hod = stock.hod;
-                            const lod = stock.lod;
-                            const stockBox = document.getElementById(`tt${count + 1}`);
+                            const stockBox = document.getElementById(`miner${count + 1}`);
 
                             let color = "";
 
@@ -1217,8 +1217,61 @@
                         };
                         count = 0;
 
-                        for (let i = 0; i < evStocks.length; i++) {
-                            const stock = evStocks[i];
+                        //ai
+                        for (let i = 0; i < topAI.length; i++) {
+                            const stock = topAI[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const hod = stock.hod;
+                            const lod = stock.lod;
+                            const stockBox = document.getElementById(`aistock${count + 1}`);
+
+                            let color = "";
+
+                            if (change24h < -3) {
+                            color += "E55451";
+                            } else if (change24h > 3) {
+                                color += "54C571";
+                            } else if(change24h > 0){
+                                color += "A0D6B4";
+                            } else{
+                                color += "FFB8BF";
+                            }
+
+                            let size = "text-lg";
+                            if(name.length + symbol.length + 1 > 13){
+                                size = "text-md";
+                            }
+                            if(name.length + symbol.length + 1 > 26){
+                                size = "text-sm";
+                            }
+
+                            // Check if the box exists before updating its content
+                            if (stockBox) {
+                                let html = '';
+                                html += `
+                                    <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                        <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                            <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                            <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                        </div>
+                                        <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                            <div>24h: <strong>${change24h.toFixed(2)}%</strong></div>
+                                            <div>Daily High: <strong>$${hod.toFixed(2)}</strong></div>
+                                            <div>Daily Low: <strong>$${lod.toFixed(2)}</strong></div>
+                                        </div>
+                                    </div>`;
+                                stockBox.innerHTML = html;
+                            }
+                            count++;
+                        };
+                        count = 0;
+
+                        //energy
+                        for (let i = 0; i < topEnergy.length; i++) {
+                            const stock = topEnergy[i];
                             const symbol = stock.symbol.toUpperCase();
                             let name = stock.name;
                             const price = stock.close;
@@ -1268,15 +1321,68 @@
                         };
                         count = 0;
 
-                        for (let i = 0; i < chipStocks.length; i++) {
-                            const stock = chipStocks[i];
+                        //banking
+                        for (let i = 0; i < topBanking.length; i++) {
+                            const stock = topBanking[i];
                             const symbol = stock.symbol.toUpperCase();
                             let name = stock.name;
                             const price = stock.close;
                             const change24h = stock.change_24h;
                             const hod = stock.hod;
                             const lod = stock.lod;
-                            const stockBox = document.getElementById(`tc${count + 1}`);
+                            const stockBox = document.getElementById(`tb${count + 1}`);
+
+                            let color = "";
+
+                            if (change24h < -3) {
+                            color += "E55451";
+                            } else if (change24h > 3) {
+                                color += "54C571";
+                            } else if(change24h > 0){
+                                color += "A0D6B4";
+                            } else{
+                                color += "FFB8BF";
+                            }
+
+                            let size = "text-lg";
+                            if(name.length + symbol.length + 1 > 13){
+                                size = "text-md";
+                            }
+                            if(name.length + symbol.length + 1 > 26){
+                                size = "text-sm";
+                            }
+
+                            // Check if the box exists before updating its content
+                            if (stockBox) {
+                                let html = '';
+                                html += `
+                                    <div class="w-72 h-24 flex p-1" style="background-color: #${color};">
+                                        <div class="flex flex-col w-1/2 h-full items-start justify-center">
+                                            <div class="${size}"><strong>${name}</strong> ${symbol}</div>
+                                            <div class="font-bold text-xl">$${price.toFixed(2)}</div>
+                                        </div>
+                                        <div class="flex flex-col w-1/2 h-full items-end text-sm justify-center">
+                                            <div>24h: <strong>${change24h.toFixed(2)}%</strong></div>
+                                            <div>Daily High: <strong>$${hod.toFixed(2)}</strong></div>
+                                            <div>Daily Low: <strong>$${lod.toFixed(2)}</strong></div>
+                                        </div>
+                                    </div>`;
+                                stockBox.innerHTML = html;
+                            }
+                            count++;
+                        };
+                        count = 0;
+
+                        //health
+                        for (let i = 0; i < topHealth.length; i++) {
+                            const stock = topHealth[i];
+                            const symbol = stock.symbol.toUpperCase();
+                            let name = stock.name;
+                            const price = stock.close;
+                            const change24h = stock.change_24h;
+                            const hod = stock.hod;
+                            const lod = stock.lod;
+                            const stockBox = document.getElementById(`th${count + 1}`);
 
                             let color = "";
 
@@ -1319,16 +1425,13 @@
                         };
 
                     } else {
-                        console.error('Error retrieving tech prices');
+                        console.error('Error retrieving trending prices.');
                     }
                 })
                 .catch((error) => {
-                    console.error('Error retrieving tech prices:', error);
+                    console.error('Error retrieving trending prices:', error);
                 });
-        }
-
-
-
+            }
 
                         
             function formatMarketCap(cap) {
@@ -1345,15 +1448,13 @@
             updateIndexPrices()
             updateCryptoPrices()
             updateTopCryptoPrices()
-            updateTrendingPrices()
-            updateTechPrices()
+            updateStockPrices()
 
 
             setInterval(updateCryptoPrices, 300000); // Fetch crypto data every 5 minutes (300000 milliseconds)
             setInterval(updateTopCryptoPrices, 300000); // Fetch top Crypto Prices every 5 minutes (300000 milliseconds)
             setInterval(updateIndexPrices, 300000); // Fetch index prices every 5 minutes. (ETF's for each index)
-            setInterval(updateTrendingPrices, 300000); // Fetch tech stock prices every 5 minutes (300000 milliseconds)
-            setInterval(updateTechPrices, 300000); // Fetch tech stock prices every 5 minutes (300000 milliseconds)
+            setInterval(updateStockPrices, 300000); // Fetch tech stock prices every 5 minutes (300000 milliseconds)
 
 
             document.getElementById('menu-toggle').addEventListener('click', toggleDropdown);

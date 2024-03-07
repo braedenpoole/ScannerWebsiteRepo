@@ -12,7 +12,7 @@
 
     </head>
 
-    <body class="bg-white">
+    <body class="bg-gray-300">
         <div>
             <!--Navbar-->
             <div id="indicesBar" class="fixed top-0 w-screen justify-center flex items-center space-x-8 h-14 px-5 lg:px-0 drop-shadow-xl bg-black" style="z-index: 999;">
@@ -36,13 +36,15 @@
                 </div>
             </div>
 
-            <div id="dropdown-index-container" class="pt-14 hidden justify-center w-full bg-black text-lg font-semibol text-center">
+            <div id="dropdown-index-container" class="pt-14 hidden justify-center w-full bg-black text-lg font-semibol text-center" style="z-index: 998;">
                 <!-- Index prices will be populated here -->
             </div>
         </div>
         
+        <div class="text-xl font-bold text-center pt-16 bg-gray-300">Cryptocurrency Data</div>
+
         <!--First Container for Crypto Boxes-->
-        <section id="topPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
+        <section id="topPage" class="h-full w-full overflow-auto bg-gray-300 pt-2 flex justify-center items-center">
             <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
                 <div class=" overflow-auto grid-cols-10 gap-6 flex w-full h-full p-3">
                     <!-- Column 1 -->
@@ -148,9 +150,17 @@
             </div>
         </section>
 
+        <!--Color Key-->
+        <div class="h-2 bg-gray-300"></div>
+        <div class="h-4 w-full bg-gray-300 flex justify-center text-center">
+            <div class="pr-4 text-right w-1/4 text-xs font-semibold">24 Hour Negative</div>
+            <div class="w-1/2 h-full" style="background:linear-gradient(to right, #E55451, #FFB8BF, #A0D6B4, #54C571 )"></div>
+            <div class="pl-4 text-left w-1/4 text-xs font-semibold">24 Hour Positive</div>
+        </div>
 
+        <div class="text-xl font-bold pt-10 text-center bg-gray-300">Stock Market Data</div>
         <!--Second Container for Stock Market Boxes-->
-        <section id="secondPage" class="h-full w-full overflow-auto bg-gray-300 pt-14 flex justify-center items-center">
+        <section id="secondPage" class="h-full w-full overflow-auto bg-gray-300 pt-2 flex justify-center items-center">
         
             <div id="allBoxes" class="h-3/4 w-5/6 md:h-5/6 bg-gray-300 flex justify-center items-center overflow-auto">
                 <div class=" overflow-auto grid-cols-8 gap-6 flex w-full h-full p-3">
@@ -234,7 +244,13 @@
             </div>
         </section>
 
-
+        <!--Color Key-->
+        <div class="h-2 bg-gray-300"></div>
+        <div class="h-4 w-full bg-gray-300 flex justify-center text-center">
+            <div class="pr-4 text-right w-1/4 text-xs font-semibold">24 Hour Negative</div>
+            <div class="w-1/2 h-full" style="background:linear-gradient(to right, #E55451, #FFB8BF, #A0D6B4, #54C571 )"></div>
+            <div class="pl-4 text-left w-1/4 text-xs font-semibold">24 Hour Positive</div>
+        </div>
 
         <section>
             <!-- TradingView Widget BEGIN -->
@@ -320,6 +336,7 @@
             function toggleDropdown() {
                 const dropdownContainer = document.getElementById('dropdown-index-container');
                 dropdownContainer.classList.toggle('hidden');
+                dropdownContainer.classList.toggle('fixed');
             }
 
             // Function to hide dropdown when screen size is increased

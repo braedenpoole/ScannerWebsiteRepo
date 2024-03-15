@@ -899,7 +899,7 @@
                             count = 0;
 
                             //Largest hour loss loop
-                            for (let i = 0; i < hourworst5Data.length; i++) {
+                            for (let i = hourworst5Data.length - 1; i >= 0; i--) {
                                 const coin = hourworst5Data[i];
                                 const name = coin.name;
                                 const symbol = coin.symbol.toUpperCase();

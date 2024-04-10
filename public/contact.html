@@ -1,0 +1,113 @@
+<!--Temporarily hosting Salus website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Salus</title>
+    <link rel="icon" href="salusImages/Logo Cropped.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black font-playfair">
+    <!--Navbar-->
+    <div class="fixed top-0 w-full flex items-center justify-between h-20 text-white px-5 lg:px-0 drop-shadow-xl bg-black border-black" style=" z-index: 999;">
+        <!--Navbar Logo-->
+        <!-- <a class="h-16 w-56" href="test" target="_blank"> -->
+        <a class="h-16 w-56" href="https://www.braedenpoole.com/salus.html" target="_blank">
+            <img class="h-16 w-56" src="salusImages/salusSuperCroppedBarbell.png">
+        </a>
+
+        <!-- Hamburger Menu Icon For Mobile Versions-->
+        <button id="menu-toggle" class="block lg:hidden focus:outline-none absolute right-6">
+            <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M4 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+            </svg>
+        </button>
+
+        <!--Navbar Menu For Computer Versions-->
+        <nav id="navbar-menu" class=" hidden lg:block text-lg font-semibold absolute right-14">
+            <a href="https://www.braedenpoole.com/salus.html" target="_blank" class="px-2 py-2 hover:text-yellow-400">Home</a>
+        </nav>
+    </div>
+
+    <!--Mobile Navbar Menu-->
+    <div id="mobile-navbar-menu" class="fixed pt-20 w-full hidden lg:hidden border-t text-center text-white bg-black" style=" z-index: 998;">
+        <a href="https://www.braedenpoole.com/salus.html" target="_blank" class="block px-4 py-2 hover:text-yellow-300">Home</a>
+    </div>
+
+
+    
+    <section id="formContact" class="pt-40 bg-black">
+        <div class="flex justify-center items-center h-full">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left w-full max-w-md bg-black border-white border-2 text-white p-6 rounded-lg">
+                <div class="text-center pb-4">
+                    <h2 class="text-lg font-semibold">Let's Get In Touch</h2>
+                </div>
+                <input type="hidden" name="access_key" value="c603ec8e-471e-47d4-b1a7-63a173b41ab4">
+                <div class="flex flex-col space-y-4">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" required>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" required>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" rows="4" required></textarea>
+                    <button type="submit" class="bg-black text-white border-white border-2 py-2 px-4 rounded-lg hover:bg-yellow-400 transition-colors duration-300">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section> 
+
+    <section id="socialMedia" class="lg:h-1/4 bg-black text-white pt-8">
+        <div class="container mx-auto h-fit text-white">
+            <!-- <h1 class="text-lg font-bold mb-4 justify-center order-1 text-center">Social Media!</h1> -->
+            <div class="flex flex-row justify-center items-center text-center">           
+                <div class="flex lg:items-center justify-center items-center pt-2">
+                        <a title="LinkedIn" href="https://www.instagram.com/salus.fitai" class="h-24 w-24 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
+                        <img class="h-24 w-24 rounded-lg border-white border-2" src="salusImages/instaLogo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // JavaScript to toggle the visibility of the menu, this is to switch back and forth from desktop to mobile
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-navbar-menu');
+            menu.classList.toggle('hidden');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollButtons = document.querySelectorAll('.scroll-btn');
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = button.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

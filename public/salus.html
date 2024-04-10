@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Braeden Poole</title>
-    <link rel="icon" href="salusImages/faceSquareCropped.JPG" type="image/x-icon">
+    <title>Salus</title>
+    <link rel="icon" href="salusImages/Logo Cropped.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -33,7 +33,8 @@
         <nav id="navbar-menu" class=" hidden lg:block text-lg font-semibold absolute right-14">
             <a href="#home" class="px-2 py-2 hover:text-yellow-400">Home</a>
             <a href="#about" class="px-2 py-2 hover:text-yellow-400">About</a>
-            <a href="#formContact" class="px-2 py-2 hover:text-yellow-400">Contact</a>
+            <a href="https://www.braedenpoole.com/salus.html/contact.html" target="_blank" class="px-2 py-2 hover:text-yellow-400">Contact</a>
+            <a href="#formBetaTestSection" class="px-2 py-2 hover:text-yellow-400">Beta Test</a>
         </nav>
     </div>
 
@@ -41,7 +42,8 @@
     <div id="mobile-navbar-menu" class="fixed pt-20 w-full hidden lg:hidden border-t text-center text-white bg-black" style=" z-index: 998;">
         <a href="#home" class="block px-4 py-2 hover:text-yellow-300">Home</a>
         <a href="#about" class="block px-4 py-2 hover:text-yellow-300">About</a>
-        <a href="#formContact" class="block px-4 py-2 hover:text-yellow-300">Contact</a>
+        <a href="https://www.braedenpoole.com/salus.html/contact.html" target="_blank" class="block px-4 py-2 hover:text-yellow-300">Contact</a>
+        <a href="#formBetaTestSection" class="block px-4 py-2 hover:text-yellow-300">Beta Test</a>
     </div>
 
     <!--Intro Content-->
@@ -133,8 +135,25 @@
     </section>
     
     
+    <section id="formBetaTestSection" class="py-20 bg-black">
+        <div class="flex justify-center items-center h-full">
+            <form id="betaTestForm" action="https://api.web3forms.com/submit" method="POST" class="contact-left w-full max-w-md bg-black border-white border-2 text-white p-6 rounded-lg">
+                <div class="text-center pb-4">
+                    <h2 class="text-2xl font-semibold">Beta Test Our App!</h2>
+                </div>
+                <input type="hidden" name="access_key" value="c603ec8e-471e-47d4-b1a7-63a173b41ab4">
+                <div class="flex flex-col space-y-4">
+                    <input type="text" name="firstName" placeholder="First Name *" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" required>
+                    <input type="text" name="lastName" placeholder="Last Name *" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" required>
+                    <input type="email" name="email" placeholder="Your Email *" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black" required>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="contact-inputs px-4 py-2 rounded-lg border border-white bg-black">
+                    <button type="submit" class="bg-black text-white border-white border-2 py-2 px-4 rounded-lg hover:bg-yellow-400 transition-colors duration-300">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section> 
 
-
+<!-- 
     <section id="formContact" class="py-20 bg-black">
         <div class="flex justify-center items-center h-full">
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-left w-full max-w-md bg-black border-white border-2 text-white p-6 rounded-lg">
@@ -150,22 +169,14 @@
                 </div>
             </form>
         </div>
-    </section>  
+    </section> 
+-->
 
-    
-
-    <section id="" class="lg:h-1/4 bg-black text-white pb-12">
+    <section id="socialMedia" class="lg:h-1/4 bg-black text-white pb-12">
         <div class="container mx-auto h-fit text-white">
-            <h1 class="text-2xl font-bold mb-4 justify-center order-1 text-center">Download Us On The AppStore!</h1>
-            <div class="flex flex-row justify-center items-center text-center space-x-6">
+            <h1 class="text-2xl font-bold mb-4 justify-center order-1 text-center">Follow Our Social Media!</h1>
+            <div class="flex flex-row justify-center items-center text-center space-x-6">           
                 <div class="flex lg:items-center justify-center items-center pt-8">
-                    <!-- <a title="LinkedIn" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://www.linkedin.com/in/braedenpoole" target="_blank"> -->
-                        <a title="LinkedIn" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
-                        <img class="h-32 w-32 rounded-lg border-white border-2" src="salusImages/Logo Cropped.png">
-                    </a>
-                </div>            
-                <div class="flex lg:items-center justify-center items-center pt-8">
-                    <!-- <a title="LinkedIn" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://www.linkedin.com/in/braedenpoole" target="_blank"> -->
                         <a title="LinkedIn" href="https://www.instagram.com/salus.fitai" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
                         <img class="h-32 w-32 rounded-lg border-white border-2" src="salusImages/instaLogo.png">
                     </a>
@@ -174,6 +185,27 @@
         </div>
     </section>
 
+
+<!--   Salus link to app store
+
+    <section id="" class="lg:h-1/4 bg-black text-white pb-12">
+        <div class="container mx-auto h-fit text-white">
+            <h1 class="text-2xl font-bold mb-4 justify-center order-1 text-center">Download Us On The AppStore!</h1>
+            <div class="flex flex-row justify-center items-center text-center space-x-6">
+                <div class="flex lg:items-center justify-center items-center pt-8">
+                        <a title="LinkedIn" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
+                        <img class="h-32 w-32 rounded-lg border-white border-2" src="salusImages/Logo Cropped.png">
+                    </a>
+                </div>            
+                <div class="flex lg:items-center justify-center items-center pt-8">
+                        <a title="LinkedIn" href="https://www.instagram.com/salus.fitai" class="h-32 w-32 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
+                        <img class="h-32 w-32 rounded-lg border-white border-2" src="salusImages/instaLogo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
 
 
     <script>
@@ -198,10 +230,35 @@
                 });
             });
         });
+
+        //phoneNumberValidation
+        document.getElementById('betaTestForm').addEventListener('submit', function(event) {
+            var phoneNumberInput = document.getElementById('phoneNumber');
+            var phoneNumber = phoneNumberInput.value;
+            if (phoneNumber && !isValidPhoneNumber(phoneNumber)) {
+                event.preventDefault();
+                alert('Please enter a valid phone number.');
+            }
+        });
+
+        function isValidPhoneNumber(phoneNumber) {
+            // This is a basic phone number validation
+            // You may need to adjust it based on your requirements
+            var phoneRegex = /^\d{10}$/; // Assuming 10-digit phone numbers
+            return phoneRegex.test(phoneNumber);
+        }
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,180 @@
+<!--Temporarily hosting Salus website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Salus</title>
+    <link rel="icon" href="salusImages/Logo Cropped.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black font-playfair">
+    <!--Navbar-->
+    <div class="fixed top-0 w-full flex items-center justify-between h-20 text-white px-5 lg:px-0 drop-shadow-xl bg-black border-black" style=" z-index: 999;">
+        <!--Navbar Logo-->
+        <!-- <a class="h-16 w-56" href="test" target="_blank"> -->
+            <a class="h-16 w-56" target="_blank">
+            <img class="h-16 w-56" src="salusImages/salusSuperCroppedBarbell.png">
+        </a>
+
+        <!-- Hamburger Menu Icon For Mobile Versions-->
+        <button id="menu-toggle" class="block lg:hidden focus:outline-none absolute right-6">
+            <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M4 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+            </svg>
+        </button>
+
+        <!--Navbar Menu For Computer Versions-->
+        <nav id="navbar-menu" class=" hidden lg:block text-lg absolute right-14">
+            <a href="#home" class="px-2 py-2 hover:text-yellow-400">Home</a>
+            <a href="#about" class="px-2 py-2 hover:text-yellow-400 font-semibold">About</a>
+            <a href="https://www.braedenpoole.com/contact.html" target="_parent" class="px-2 py-2 hover:text-yellow-400">Contact</a>
+        </nav>
+    </div>
+
+    <!--Mobile Navbar Menu-->
+    <div id="mobile-navbar-menu" class="fixed pt-20 w-full hidden lg:hidden border-t text-center text-white bg-black" style=" z-index: 998;">
+        <a href="#home" class="block px-4 py-2 hover:text-yellow-300">Home</a>
+        <a href="https://www.braedenpoole.com/about.html" class="block px-4 py-2 hover:text-yellow-300">About</a>
+        <a href="https://www.braedenpoole.com/contact.html" target="_parent" class="block px-4 py-2 hover:text-yellow-300">Contact</a>
+    </div>
+
+    <!--Mobile Navbar Menu-->
+    <div id="mobile-navbar-menu" class="fixed pt-20 w-full hidden lg:hidden border-t text-center text-white bg-black" style=" z-index: 998;">
+        <a href="https://www.braedenpoole.com/salus.html" target="_parent" class="block px-4 py-2 hover:text-yellow-300">Home</a>
+    </div>
+
+    <!--first section-->
+    <section id="about" class="h-fit w-full bg-black pt-20">
+        <div class="container mx-auto h-full px-4 lg:px-0 pb-8">
+
+    
+            <!-- Flex Container for Image and Text -->
+            <div class="flex flex-wrap lg:flex-nowrap items-start pt-24 space-y-6 lg:space-y-0 lg:space-x-8">
+                <!-- Image Section -->
+                <div class="w-full lg:w-1/2">
+                    <img 
+                        class="rounded-lg border-white border-2 object-cover w-full h-full" 
+                        src="salusImages/Assets/Hadi Gym.jpg" 
+                        alt="Gym Image">
+                </div>
+    
+                <!-- Text Section -->
+                <div class="w-full lg:w-1/2 flex items-center text-white text-center">
+                    <div class="w-full lg:px-8">
+                        <div class="font-bold text-yellow-400 text-5xl mb-4">
+                            One App. For Everything.
+                        </div>
+                        <div class="font-semibold text-xl leading-relaxed pt-12">
+                            <div class="font-semibold text-2xl leading-relaxed">
+                                <span class="text-yellow-400">Salus</span> transforms fitness tracking with a chat-based interface
+                                that makes logging workouts and meals effortless. It connects and 
+                                consolidates all your fitness data, giving you personalized insights
+                                and guidance to elevate your fitness journey into an all-in-one 
+                                seamless experience.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="w-3/4 h-0.5 bg-yellow-400 mx-auto my-4"></div>
+    </section>
+
+    <!-- Second Section -->
+    <section id="about" class="h-fit w-full bg-black pt-20">
+        <div class="container mx-auto h-full px-4 lg:px-0 pb-8">
+            <!-- Flex Container for Image and Text -->
+            <div class="flex flex-wrap lg:flex-nowrap items-start pt-24 space-y-6 lg:space-y-0 lg:space-x-8">
+                <!-- Image Section -->
+                <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img 
+                            class="rounded-lg border-white border-2 object-cover w-full h-full" 
+                            src="salusImages/Assets/Hadi Stressed.jpg" 
+                            alt="Gym Image">
+                    </div>
+                </div>
+
+                <!-- Text Section -->
+                <div class="w-full lg:w-1/2 flex items-center text-white text-center order-2 lg:order-1">
+                    <div class="w-full lg:px-8">
+                        <div class="font-bold text-yellow-400 text-5xl mb-4">
+                            Like Another App? No Problem.
+                        </div>
+                        <div class="font-semibold text-2xl leading-relaxed pt-12">
+                            Have a favorite fitness app already? <span class="text-yellow-400">Salus</span> integrates
+                            your existing fitness data into one easy dashboard to provide
+                            powerful insights and guidance into <span class="text-yellow-400">ALL</span> your fitness
+                            data. <span class="text-yellow-400">Be able to talk to your data.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="w-3/4 h-0.5 bg-yellow-400 mx-auto my-4"></div>
+        <div></div>
+    </section>
+
+
+    
+    <!--Social Media-->
+    <section id="socialMedia" class="lg:h-1/4 bg-black text-white pb-12 pt-12">
+        <div class="container mx-auto h-fit text-white">
+            <h1 class="text-sm justify-center order-1 text-center pb-12">Salus Digital LLC©, All Rights Reserved</h1>
+            <div class="flex flex-row justify-center items-center text-center">           
+                <div class="flex lg:items-center justify-center items-center">
+                        <a title="instagram" href="https://www.instagram.com/salus.fitai" class="h-16 w-16 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" target="_blank">
+                        <img class="h-16 w-16" src="salusImages/instaLogo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // JavaScript to toggle the visibility of the menu, this is to switch back and forth from desktop to mobile
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-navbar-menu');
+            menu.classList.toggle('hidden');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollButtons = document.querySelectorAll('.scroll-btn');
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = button.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

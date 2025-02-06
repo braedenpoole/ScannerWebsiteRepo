@@ -37,7 +37,7 @@ async function fetchTopCryptoData() {
             params: {
                 vs_currency: 'usd',
                 order: 'market_cap_desc',
-                per_page: 200,
+                per_page: 250,
                 page: 1,
                 price_change_percentage: '1h,24h', // Include both 1-hour and 24-hour percentage changes
             },

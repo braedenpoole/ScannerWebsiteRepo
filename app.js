@@ -1,16 +1,17 @@
 const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
 const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 4000;
 
-let TechPrices = null;
 let cryptoData = null;
-let topCryptoData = null;
+let techPrices = null;
 let indexPrices = null;
 
-// Enable CORS headers
+// A helper function to create a delay
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+// Enable CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -18,20 +19,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// Create a proxy middleware for CoinGecko API
-const coinGeckoProxy = createProxyMiddleware({
-    target: 'https://api.coingecko.com',
-    changeOrigin: true,
-    secure: true,
-    pathRewrite: {
-        '^/coingecko/api/v3/coins/markets': '/api/v3/coins/markets',
-    },
-});
-
-// Proxy requests to CoinGecko API
-app.use('/coingecko', coinGeckoProxy);
-
-async function fetchTopCryptoData() {
+async function fetchCryptoData() {
     try {
         const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
             params: {
@@ -39,147 +27,91 @@ async function fetchTopCryptoData() {
                 order: 'market_cap_desc',
                 per_page: 250,
                 page: 1,
-                price_change_percentage: '1h,24h', // Include both 1-hour and 24-hour percentage changes
+                sparkline: false,
+                price_change_percentage: '1h,24h'
             },
         });
-
-        topCryptoData = response.data;
-        console.log('Top cryptocurrency data fetched and stored.');
-    } catch (error) {
-        console.error('Error fetching top cryptocurrency data:', error.message);
-    }
-}
-
-async function fetchCryptoData() {
-    try {
-        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
-            params: {
-                vs_currency: 'usd',
-                order: 'market_cap_desc',
-                per_page: 9,
-                page: 1,
-                price_change_percentage: '1h,24h',
-            },
-        });
-
         cryptoData = response.data;
-        console.log('Cryptocurrency data fetched and stored.');
+        console.log('Cryptocurrency data fetched successfully.');
     } catch (error) {
         console.error('Error fetching cryptocurrency data:', error.message);
     }
-
-    await new Promise((resolve) => setTimeout(resolve, 60000));
 }
 
 async function fetchTechPrices() {
     const symbols = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'META', 'TSLA', 'LCID', 'RIVN', 'NIO', 'HYLN', 'NVDA', 'AMD', 'INTC', 'TSM', 'QCOM', 'MARA', 'CLSK', 'RIOT', 'CIFR', 'BITF', 'PLTR', 'IBM', 'AI', 'CRWD', 'SOUN', 'XOM', 'SHEL', 'COP', 'NEE', 'BP', 'JPM', 'BAC', 'WFC', 'MS', 'GS', 'UNH', 'ELV', 'CI', 'CVS', 'HCA'];
-    const names = ['Apple', 'Microsoft', 'Google', 'Amazon', 'Meta', 'Tesla', 'Lucid', 'Rivian', 'NIO', 'Hyliion', 'Nvidia', 'AMD', 'Intel', 'Taiwan SemiConductor', 'Qualcomm', 'Marathon Digital', 'Cleanspark', 'Riot Platforms', 'Cipher Mining', 'Bitfarms', 'Palantir', 'IBM', 'C3.ai', 'Crowdstrike', 'SoundHound AI', 'Exxon Mobil', 'Shell', 'ConocoPhillips', 'NextEra Energy', 'BP', 'JPMorgan Chase & Co', 'Bank of America', 'Wells Fargo', 'Morgan Stanley', 'Goldman Sachs', 'UnitedHealth Group', 'Elevance Health', 'Cigna Group', 'CVS Health', 'HCA Healthcare'];
-    const token = 'ciqtjq9r01qjff7cukf0ciqtjq9r01qjff7cukfg';
+    const names = ['Apple', 'Microsoft', 'Google', 'Amazon', 'Meta', 'Tesla', 'Lucid', 'Rivian', 'NIO', 'Hyliion', 'Nvidia', 'AMD', 'Intel', 'Taiwan Semi', 'Qualcomm', 'Marathon Digital', 'Cleanspark', 'Riot Platforms', 'Cipher Mining', 'Bitfarms', 'Palantir', 'IBM', 'C3.ai', 'Crowdstrike', 'SoundHound AI', 'Exxon Mobil', 'Shell', 'ConocoPhillips', 'NextEra Energy', 'BP', 'JPMorgan Chase', 'Bank of America', 'Wells Fargo', 'Morgan Stanley', 'Goldman Sachs', 'UnitedHealth', 'Elevance Health', 'Cigna Group', 'CVS Health', 'HCA Healthcare'];
+    const token = 'ciqtjq9r01qjff7cukf0ciqtjq9r01qjff7cukfg'; // Replace with your Finnhub API token
 
+    const results = [];
     try {
-        const promises = symbols.map(async (symbol, stockName) => {
+        for (let i = 0; i < symbols.length; i++) {
+            const symbol = symbols[i];
             const response = await axios.get('https://finnhub.io/api/v1/quote', {
-                params: {
-                    symbol: symbol,
-                    token: token,
-                },
+                params: { symbol, token },
             });
 
             const { c, pc, h, l } = response.data;
-            const change_24h = ((c - pc) / pc) * 100; // Calculate the 24-hour change in percentage
-            return {
-                symbol: symbol,
-                close: c,
-                change_24h: change_24h,
-                name: names[stockName],
-                hod: h,
-                lod: l,
+            const change_24h = ((c - pc) / pc) * 100;
+            results.push({
+                symbol, name: names[i],
+                close: c, change_24h, hod: h, lod: l,
+            });
 
-            };
-        });
+            // Wait for 1.1 seconds before the next request to avoid rate limiting
+            await delay(1100);
+        }
 
-        TechPrices = await Promise.all(promises);
-
-        lastApiCallTime = new Date();
-        console.log('Stock prices fetched and stored.');
+        techPrices = results;
+        console.log('Tech stock prices fetched successfully.');
     } catch (error) {
         console.error('Error fetching tech stock prices:', error.message);
     }
-
-    await new Promise((resolve) => setTimeout(resolve, 60000));
 }
-
 
 async function fetchIndexPrices() {
     const symbols = ['SPY', 'DIA', 'QQQ', 'IWM', 'USO', 'UUP'];
-    const token = 'ciqtjq9r01qjff7cukf0ciqtjq9r01qjff7cukfg';
-    const names = ['S&P 500', 'Dow', 'Nasdaq', 'Russell 2000', 'Oil', 'US Dollar']
+    const names = ['S&P 500', 'Dow', 'Nasdaq', 'Russell 2000', 'Oil', 'US Dollar'];
+    const token = 'ciqtjq9r01qjff7cukf0ciqtjq9r01qjff7cukfg'; // Replace with your Finnhub API token
 
+    const results = [];
     try {
-        const promises = symbols.map(async (symbol, index) => {
+        for (let i = 0; i < symbols.length; i++) {
+            const symbol = symbols[i];
             const response = await axios.get('https://finnhub.io/api/v1/quote', {
-                params: {
-                    symbol: symbol,
-                    token: token,
-                },
+                params: { symbol, token },
             });
 
-            const { c, pc } = response.data; // Get the current price (c) and the previous close (pc)
-            const change_24h = ((c - pc) / pc) * 100; // Calculate the 24-hour change in percentage
+            const { c, pc } = response.data;
+            const change_24h = ((c - pc) / pc) * 100;
+            results.push({ symbol, name: names[i], close: c, change_24h });
 
-            return {
-                symbol: symbol,
-                close: c,
-                change_24h: change_24h,
-                name: names[index],
-            };
-        });
+            // Wait for 1.1 seconds before the next request
+            await delay(1100);
+        }
 
-        indexPrices = await Promise.all(promises);
-
-        lastApiCallTime = new Date();
-        console.log('Index prices fetched and stored.');
+        indexPrices = results;
+        console.log('Index prices fetched successfully.');
     } catch (error) {
-        console.error('Error fetching index stock prices:', error.message);
+        console.error('Error fetching index prices:', error.message);
     }
-
-    await new Promise((resolve) => setTimeout(resolve, 60000));
 }
 
+// --- API Endpoints ---
+app.get('/api/crypto', (req, res) => res.json(cryptoData));
+app.get('/api/TechPrices', (req, res) => res.json(techPrices));
+app.get('/api/indices', (req, res) => res.json(indexPrices));
 
-
-fetchCryptoData();
-fetchTopCryptoData();
-fetchTechPrices();
-
-setInterval(fetchCryptoData, 300000);
-setInterval(fetchTechPrices, 300000);
-setInterval(fetchTopCryptoData, 300000);
-
-function fetchAndRefreshIndexPrices() {
+// --- Initial Data Fetch and Interval Scheduling ---
+function fetchAllData() {
+    // We run these in parallel, but the functions themselves have delays internally
+    fetchCryptoData();
+    fetchTechPrices();
     fetchIndexPrices();
-    setInterval(fetchIndexPrices, 300000);
 }
 
-setTimeout(fetchAndRefreshIndexPrices, 62000);
-
-app.use(express.static('public'));
-
-app.get('/api/cryptodata', (req, res) => {
-    res.json(cryptoData);
-});
-
-app.get('/api/topCryptoData', (req, res) => {
-    res.json(topCryptoData);
-});
-
-app.get('/api/TechPrices', (req, res) => {
-    res.json(TechPrices);
-});
-
-app.get('/api/indexPrices', (req, res) => {
-    res.json(indexPrices);
-})
+fetchAllData(); // Fetch immediately on server start
+setInterval(fetchAllData, 300000); // Refresh all data every 5 minutes
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);

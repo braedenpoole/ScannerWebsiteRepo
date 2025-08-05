@@ -10,287 +10,347 @@
     <link rel="icon" href="Images/faceSquareCropped.JPG" type="image/x-icon">
 
 </head>
-<body style = "background-color: #11192c;">
-    <!--Navbar-->
-    <div class="fixed top-0 w-full flex items-center justify-between h-20 text-white px-5 lg:px-0 border-b border-gray-500" style="background-color: rgba(29, 36, 54, 0.8); backdrop-filter: blur(8px); z-index: 999;">
-        <!--Navbar Logo-->
-        <div class="text-2xl font-semibold absolute left-4 md:left-16 ">
-            <a href="https://www.braedenpoole.com/scanner.html" class="px-2 py-2" target="_blank">Market Scanner Website</a>
-        </div>
-
-        <!-- Hamburger Menu Icon For Mobile Versions-->
-        <button id="menu-toggle" class="block lg:hidden focus:outline-none absolute right-6">
-            <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M4 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-            </svg>
-        </button>
-
-        <!--Navbar Menu For Computer Versions-->
-        <nav id="navbar-menu" class="hidden lg:block text-lg font-semibold absolute right-14">
-            <a href="#home" class="px-2 py-2 text-gray-300 hover:text-white">Home</a>
-            <a href="#projectOne" class="px-2 text-gray-300 py-2 hover:text-white">Projects</a>
-            <a href="#about" class="px-2 py-2 text-gray-300 hover:text-white">About</a>
-        </nav>
+<body style="background-color: #11192c;">
+<!--Navbar-->
+<div class="fixed top-0 w-full flex items-center justify-between h-20 text-white px-5 lg:px-0 border-b border-gray-500"
+     style="background-color: rgba(29, 36, 54, 0.8); backdrop-filter: blur(8px); z-index: 999;">
+    <!--Navbar Logo-->
+    <div class="text-2xl font-semibold absolute left-4 md:left-16 ">
+        <a href="https://www.braedenpoole.com/scanner.html" class="px-2 py-2" target="_blank">Market Scanner Website</a>
     </div>
 
-    <!--Mobile Navbar Menu-->
-    <div id="mobile-navbar-menu" class="fixed mt-20 w-full hidden lg:hidden border-t border-gray-500 text-start pl-6 text-white pb-6" style="background-color: rgba(29, 36, 54, 0.8); backdrop-filter: blur(8px); z-index: 998;">
-        <a href="#home" class="block px-4 py-2 text-white pt-6">Home</a>
-        <a href="#projectOne" class="block px-4 text-white">Projects</a>
-        <a href="#about" class="block px-4 py-2 text-white">About</a>
-    </div>
+    <!-- Hamburger Menu Icon For Mobile Versions-->
+    <button id="menu-toggle" class="block lg:hidden focus:outline-none absolute right-6">
+        <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+                  d="M4 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+        </svg>
+    </button>
 
-    <!--Intro Content-->
-    <section id="home" class="lg:h-screen md:h-fit sm:h-fit">
-        <div class="container mx-auto h-fit">
-            <div class="flex flex-col lg:flex-row justify-center items-center">
-                <!-- Picture of Me on Top for Mobile -->
-                <div class="content py-36 lg:text-left lg:flex lg:justify-center lg:items-center lg:mt-0 lg:order-2 lg:ml-16">
-                    <img class="h-80 w-80 rounded-md" src="Images/faceSquareCropped.JPG">
-                </div>
+    <!--Navbar Menu For Computer Versions-->
+    <nav id="navbar-menu" class="hidden lg:block text-lg font-semibold absolute right-14">
+        <a href="#home" class="px-2 py-2 text-gray-300 hover:text-white">Home</a>
+        <a href="#projectOne" class="px-2 text-gray-300 py-2 hover:text-white">Projects</a>
+        <a href="#about" class="px-2 py-2 text-gray-300 hover:text-white">About</a>
+    </nav>
+</div>
 
-                <!-- Text Content -->
-                <div class="content lg:py-24 text-center justify-center lg:text-left w-full lg:w-1/3 lg:mr-24 pr-5 pl-5 lg:pr-0 lg:pl-0">
-                    <h1 class="text-6xl font-bold mb-4 flex text-white">Software and Web Developer<img title="Hello!" class="h-16 w-16 rounded-lg" src="Images/wavinghand.png"></h1>
-                    <p class="text-white text-lg">Hi! I'm Braeden Poole, a passionate Computer Science student at UNC Chapel Hill.</p>
-                    <div class="flex lg:justify-start lg:items-center justify-center items-center mt-4 space-x-6">
-                        <a title="LinkedIn" class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://www.linkedin.com/in/braedenpoole" target="_blank">
-                            <img class="h-8 w-8 rounded-lg" src="Images/linkedInLogo.png">
-                        </a>
-                        <a title="Github" class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://github.com/braedenpoole" target="_blank">
-                            <img class="h-8 w-8 rounded-lg" src="Images/githubLogo.webp">
-                        </a>
-                        <a title="Resume" class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://drive.google.com/file/d/1ctseDTVqeJSSqPmqse0FLxoSgUtW7MuH/view?usp=sharing" target="_blank">
-                            <img class="h-8 w-8 rounded-lg" src="Images/resumeLogo.png">
-                        </a>
-                        <a title="Youtube" class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="http://www.youtube.com/@braedenpoole1" target="_blank">
-                            <img class="h-8 w-8 rounded-lg" src="Images/youtubeLogo.png">
-                        </a>
-                    </div>
-                    <div>
-                        <h1 class="">
+<!--Mobile Navbar Menu-->
+<div id="mobile-navbar-menu"
+     class="fixed mt-20 w-full hidden lg:hidden border-t border-gray-500 text-start pl-6 text-white pb-6"
+     style="background-color: rgba(29, 36, 54, 0.8); backdrop-filter: blur(8px); z-index: 998;">
+    <a href="#home" class="block px-4 py-2 text-white pt-6">Home</a>
+    <a href="#projectOne" class="block px-4 text-white">Projects</a>
+    <a href="#about" class="block px-4 py-2 text-white">About</a>
+</div>
 
-                        </h1>
-                    </div>
-                </div>                
+<!--Intro Content-->
+<section id="home" class="lg:h-screen md:h-fit sm:h-fit">
+    <div class="container mx-auto h-fit">
+        <div class="flex flex-col lg:flex-row justify-center items-center">
+            <!-- Picture of Me on Top for Mobile -->
+            <div class="content py-36 lg:text-left lg:flex lg:justify-center lg:items-center lg:mt-0 lg:order-2 lg:ml-16">
+                <img class="h-80 w-80 rounded-md" src="Images/faceSquareCropped.JPG">
             </div>
-            <!-- Tech Stack Content -->
-            <div class="flex flex-col items-center mt-4 justify-center py-16 lg:py-0 pr-5 pl-5">
-                <h1 class="font-semibold text-lg mb-4 lg:hidden md:block sm:block text-white">Tech Stack</h1>
-                <div class="flex flex-wrap justify-center lg:justify-start items-center text-white">
-                    <p class="mr-2 lg:mr-4 font-semibold text-lg hidden lg:block md:hidden sm:hidden">Tech stack |</p>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1" title="Java">
-                        <img class="h-12 w-12 rounded-lg" src="Images/javaLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8" title="JavaScript">
-                        <img class="h-12 w-12 rounded-lg" src="Images/javascriptLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1" title="HTML">
-                        <img class="h-12 w-12 rounded-lg" src="Images/htmlLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8" title="CSS">
-                        <img class="h-12 w-12 rounded-lg" src="Images/cssLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1" title="Tailwind CSS">
-                        <img class="h-12 w-12 rounded-lg" src="Images/tailwindLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8" title="Node.js">
-                        <img class="h-12 w-12 rounded-lg" src="Images/nodejsLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1" title="TypeScript">
-                        <img class="h-12 w-12 rounded-lg" src="Images/typeScriptLogo.png">
-                    </a>
-                    <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8" title="PostgreSQL">
-                        <img class="h-12 w-12 rounded-lg" src="Images/postgresLogo.png">
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <section id="projectOne" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-24" style="background-color: #1d2436;" >
-        <div class="container mx-auto h-fit">
-            <!--Crypto Project-->
-            <h1 class="text-4xl font-bold mb-4 justify-center pt-24  pb-5 text-center text-white">PROJECTS</h1>
-            <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md: mr=16 ml-4 mr-4 rounded-2xl pt-5 pb-5" style="background-color: #272e3f;" >
-                <div class="space-y-2 w-full">
-                    <a href="https://www.braedenpoole.com/scanner.html" target="_blank" class="h-64 lg:h-96 w-auto rounded-md">
-                        <img class=" w-full rounded-md border-2 border-black" src="Images/scannerHome.png">
-                    </a>
-                </div>
-
-                <!-- Text Content -->
-                <div class="content lg:text-left w-full">
-                    <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Crypto and Stock Market Scanner</h1>
-                    
-                    <div class="flex flex-wrap gap-2 pb-4">
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">JavaScript</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">HTML</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CSS</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Nodejs</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Git</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CoinGecko API</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Finnhub API</div>
-                    </div>
-                    <div class="flex flex-wrap pb-4 gap-2 text-white">
-                        <p>- This is my market scanner project in which I scan and analyze crypto and stock data from multiple API's and show them in a visually appealing way.</p>
-                        <p>- With this website users can quickly analyze and absorb the status of the crypto and stock market without maneuvering through excess ads and unnecessary information.</p>
-                    </div>
-
-                    <div class="flex gap-4">
-                        <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1" href="https://www.braedenpoole.com/scanner.html" target="_blank">
-                            <div>Link To Site</div>
-                        </a>
-                        <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1" href="https://github.com/braedenpoole/ScannerWebsiteRepo" target="_blank">
-                            <div>Source Code</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        <div>
-    </section>
-
-    <section id="projectTwo" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-24" style="background-color: #1d2436;">
-        <div class="container mx-auto h-fit">
-            <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md:mr-16 ml-4 mr-4 rounded-2xl pt-5 pb-5" style="background-color: #272e3f;">
-                <div class="space-y-2 w-full">
-                    <iframe class="w-full h-64 lg:h-96 rounded-md border-2 border-black" src="https://www.youtube.com/embed/o_sKCnBLzs0?si=xEQMWDAp_gavzA--git" frameborder="0" allowfullscreen></iframe>
-                </div>
-    
-                <!-- Text Content -->
-                <div class="content lg:text-left w-full">
-                    <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Gymnastics Lesson Planner</h1>
-                    
-                    <div class="flex flex-wrap gap-2 pb-4">
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Java</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">JavaFX</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Git</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Github</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Agile</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">SDLC</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Maven</div>
-                    </div>
-                    <div class="flex flex-wrap pb-4 gap-2 text-white">
-                        <p>- In a team of four, competed in a semester-long competition aimed at developing an optimized packaged software solution for a client's gymnastics coaching business.</p>
-                        <p>- Our software makes it significantly easier for gym coaches to tailor and create specific lesson plans for their players by providing a platform to automate the configuration and design of lesson plans.</p>
-                        <p>- After winning and being chosen for a private contract, our ongoing development tasks consist of weekly meetings with our client, redesign of features, implementation of new features client desires, and debugging.</p>
-                    </div>
-    
-                    <div class="flex gap-4">
-                        <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1" href="https://github.com/AugustanaCSC305Fall23/CurlewRepo" target="_blank">
-                            <div>Source Code</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projectThree" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-18" style="background-color: #1d2436;">
-        <div class="container mx-auto h-fit">
-            <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md:mr-16 ml-4 mr-4 rounded-2xl pt-5 pb-5" style="background-color: #272e3f;">
-                <div class="space-y-2 w-full">
-                    <a href="https://www.braedenpoole.com/salus.html" target="_blank" class="h-64 lg:h-96 w-auto rounded-md">
-                        <img class="w-full rounded-md border-2 border-black" src="Images/SalusFrontScreenImage.png">
-                    </a>
-                </div>
-    
-                <!-- Text Content -->
-                <div class="content lg:text-left w-full">
-                    <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Salus Mobile App</h1>
-                    <p class="font-light italic mb-4 text-white">
-                        Coming to App Stores Summer 2025...
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-2 pb-4">
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">TypeScript</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">HTML</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CSS</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Nodejs</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Supabase</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Flutter</div>
-                        <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">OpenAI API</div>
-                    </div>
-                    <div class="flex flex-wrap pb-4 gap-2 text-white">
-                        <p>- In a team of three, developed an AI-powered fitness tracker mobile app utilizing a Node.js backend written in TypeScript with a Supabase database for user data, alongside a Flutter frontend.</p>
-                        <p>- Engineered and trained an AI chatbot using the OpenAI API to serve as a personalized fitness advisor, implementing custom prompts and dynamic variable integration for precise user interaction and tailored recommendations.</p>
-                    </div>
-    
-                    <div class="flex gap-4">
-                        <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1" href="https://www.youtube.com/watch?v=PYFkLLlMIdQ&t=194s" target="_blank">
-                            <div>Demo Video</div>
-                        </a>
-                        <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1" href="https://www.braedenpoole.com/salus.html" target="_blank">
-                            <div>Link To Site</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!--About Section-->
-    <section id="about" class="lg:h-1/4 md:h-fit sm:h-auto text-white pb-24" style="background-image: linear-gradient(#1d2436, #272e3f);
-;">
-        <div class="container mx-auto h-fit">
-            <h1 class="text-2xl font-bold mb-4 justify-center pt-24 order-1 pb-10 text-center">About</h1>
-
 
             <!-- Text Content -->
-            <div class="text-center justify-center lg:text-center">
-                <p class="text-xl mb-4 justify-start pr-16 pl-16 lg:pr-60 lg:pl-60">
-                    As a collegiate baseball player turned programmer, I am driven towards creating technologies that can solve problems. 
-                    Through my past years of experience in this industry, I have developed my own crypto and stock market research tool, along with an optimized packaged software solution for a client's gymnastics coaching business. 
-                    Currently, I am developing an Artificial Intelligence powered fitness tracker mobile app named Salus.
-                    I am quietly confident and driven by a passion to develop creative solutions to any problem.
-                </p>
+            <div class="content lg:py-24 text-center justify-center lg:text-left w-full lg:w-1/3 lg:mr-24 pr-5 pl-5 lg:pr-0 lg:pl-0">
+                <h1 class="text-6xl font-bold mb-4 flex text-white">Software and Web Developer<img title="Hello!"
+                                                                                                   class="h-16 w-16 rounded-lg"
+                                                                                                   src="Images/wavinghand.png">
+                </h1>
+                <p class="text-white text-lg">Hi! I'm Braeden Poole, a passionate Computer Science student at UNC Chapel
+                    Hill.</p>
+                <div class="flex lg:justify-start lg:items-center justify-center items-center mt-4 space-x-6">
+                    <a title="LinkedIn"
+                       class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://www.linkedin.com/in/braedenpoole" target="_blank">
+                        <img class="h-8 w-8 rounded-lg" src="Images/linkedInLogo.png">
+                    </a>
+                    <a title="Github"
+                       class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://github.com/braedenpoole" target="_blank">
+                        <img class="h-8 w-8 rounded-lg" src="Images/githubLogo.webp">
+                    </a>
+                    <a title="Resume"
+                       class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://drive.google.com/file/d/1ctseDTVqeJSSqPmqse0FLxoSgUtW7MuH/view?usp=sharing"
+                       target="_blank">
+                        <img class="h-8 w-8 rounded-lg" src="Images/resumeLogo.png">
+                    </a>
+                    <a title="Youtube"
+                       class="h-8 w-8 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+                       href="http://www.youtube.com/@braedenpoole1" target="_blank">
+                        <img class="h-8 w-8 rounded-lg" src="Images/youtubeLogo.png">
+                    </a>
+                </div>
+                <div>
+                    <h1 class="">
+
+                    </h1>
+                </div>
             </div>
-            <div class="flex lg:items-center justify-center items-center mt-4 space-x-6 pt-8">
-                <a title="LinkedIn" class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://www.linkedin.com/in/braedenpoole" target="_blank">
-                    <img class="h-10 w-10 rounded-lg" src="Images/linkedInLogo.png">
+        </div>
+        <!-- Tech Stack Content -->
+        <div class="flex flex-col items-center mt-4 justify-center py-16 lg:py-0 pr-5 pl-5">
+            <h1 class="font-semibold text-lg mb-4 lg:hidden md:block sm:block text-white">Tech Stack</h1>
+            <div class="flex flex-wrap justify-center lg:justify-start items-center text-white">
+                <p class="mr-2 lg:mr-4 font-semibold text-lg hidden lg:block md:hidden sm:hidden">Tech stack |</p>
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1"
+                   title="Java">
+                    <img class="h-12 w-12 rounded-lg" src="Images/javaLogo.png">
                 </a>
-                <a title="Github" class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://github.com/braedenpoole" target="_blank">
-                    <img class="h-10 w-10 rounded-lg" src="Images/githubLogo.webp">
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8"
+                   title="JavaScript">
+                    <img class="h-12 w-12 rounded-lg" src="Images/javascriptLogo.png">
                 </a>
-                <a title="Resume" class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="https://drive.google.com/file/d/1ctseDTVqeJSSqPmqse0FLxoSgUtW7MuH/view?usp=sharing" target="_blank">
-                    <img class="h-10 w-10 rounded-lg" src="Images/resumeLogo.png">
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1"
+                   title="HTML">
+                    <img class="h-12 w-12 rounded-lg" src="Images/htmlLogo.png">
                 </a>
-                <a title="Youtube" class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1" href="http://www.youtube.com/@braedenpoole1" target="_blank">
-                    <img class="h-10 w-10 rounded-lg" src="Images/youtubeLogo.png">
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8"
+                   title="CSS">
+                    <img class="h-12 w-12 rounded-lg" src="Images/cssLogo.png">
+                </a>
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1"
+                   title="Tailwind CSS">
+                    <img class="h-12 w-12 rounded-lg" src="Images/tailwindLogo.png">
+                </a>
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8"
+                   title="Node.js">
+                    <img class="h-12 w-12 rounded-lg" src="Images/nodejsLogo.png">
+                </a>
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-1"
+                   title="TypeScript">
+                    <img class="h-12 w-12 rounded-lg" src="Images/typeScriptLogo.png">
+                </a>
+                <a class="h-12 w-12 rounded-lg transition-transform duration-300 transform hover:-translate-y-1 mr-8"
+                   title="PostgreSQL">
+                    <img class="h-12 w-12 rounded-lg" src="Images/postgresLogo.png">
                 </a>
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
 
+<section id="projectOne" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-24" style="background-color: #1d2436;">
+    <div class="container mx-auto h-fit">
+        <!--Crypto Project-->
+        <h1 class="text-4xl font-bold mb-4 justify-center pt-24  pb-5 text-center text-white">PROJECTS</h1>
+        <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md: mr=16 ml-4 mr-4 rounded-2xl pt-5 pb-5"
+             style="background-color: #272e3f;">
+            <div class="space-y-2 w-full">
+                <a href="https://www.braedenpoole.com/scanner.html" target="_blank"
+                   class="h-64 lg:h-96 w-auto rounded-md">
+                    <img class=" w-full rounded-md border-2 border-black" src="Images/scannerHome.png">
+                </a>
+            </div>
 
-    <script>
-        // JavaScript to toggle the visibility of the menu, this is to switch back and forth from desktop to mobile
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-navbar-menu');
-            menu.classList.toggle('hidden');
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollButtons = document.querySelectorAll('.scroll-btn');
-            scrollButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = button.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+            <!-- Text Content -->
+            <div class="content lg:text-left w-full">
+                <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Crypto and Stock Market Scanner</h1>
+
+                <div class="flex flex-wrap gap-2 pb-4">
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">JavaScript</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">HTML</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CSS</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Nodejs</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Git</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CoinGecko API
+                    </div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Finnhub API
+                    </div>
+                </div>
+                <div class="flex flex-wrap pb-4 gap-2 text-white">
+                    <p>- This is my market scanner project in which I scan and analyze crypto and stock data from
+                        multiple API's and show them in a visually appealing way.</p>
+                    <p>- With this website users can quickly analyze and absorb the status of the crypto and stock
+                        market without maneuvering through excess ads and unnecessary information.</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://www.braedenpoole.com/scanner.html" target="_blank">
+                        <div>Link To Site</div>
+                    </a>
+                    <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://github.com/braedenpoole/ScannerWebsiteRepo" target="_blank">
+                        <div>Source Code</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+</section>
+
+<section id="projectTwo" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-24" style="background-color: #1d2436;">
+    <div class="container mx-auto h-fit">
+        <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md:mr-16 ml-4 mr-4 rounded-2xl pt-5 pb-5"
+             style="background-color: #272e3f;">
+            <div class="space-y-2 w-full">
+                <iframe class="w-full h-64 lg:h-96 rounded-md border-2 border-black"
+                        src="https://www.youtube.com/embed/o_sKCnBLzs0?si=xEQMWDAp_gavzA--git" frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
+
+            <!-- Text Content -->
+            <div class="content lg:text-left w-full">
+                <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Gymnastics Lesson Planner</h1>
+
+                <div class="flex flex-wrap gap-2 pb-4">
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Java</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">JavaFX</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Git</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Github</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Agile</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">SDLC</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Maven</div>
+                </div>
+                <div class="flex flex-wrap pb-4 gap-2 text-white">
+                    <p>- In a team of four, competed in a semester-long competition aimed at developing an optimized
+                        packaged software solution for a client's gymnastics coaching business.</p>
+                    <p>- Our software makes it significantly easier for gym coaches to tailor and create specific lesson
+                        plans for their players by providing a platform to automate the configuration and design of
+                        lesson plans.</p>
+                    <p>- After winning and being chosen for a private contract, our ongoing development tasks consist of
+                        weekly meetings with our client, redesign of features, implementation of new features client
+                        desires, and debugging.</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://github.com/AugustanaCSC305Fall23/CurlewRepo" target="_blank">
+                        <div>Source Code</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projectThree" class="lg:h-3/5 md:h-3/5 sm:h-fit pb-18" style="background-color: #1d2436;">
+    <div class="container mx-auto h-fit">
+        <div class="flex flex-col lg:flex-row md:gap-16 sm:gap-4 pl-12 pr-12 lg:pl-24 lg:pr-24 border-gray-500 border md:ml-16 md:mr-16 ml-4 mr-4 rounded-2xl pt-5 pb-5"
+             style="background-color: #272e3f;">
+            <div class="space-y-2 w-full">
+                <a href="https://www.braedenpoole.com/salus.html" target="_blank"
+                   class="h-64 lg:h-96 w-auto rounded-md">
+                    <img class="w-full rounded-md border-2 border-black" src="Images/SalusFrontScreenImage.png">
+                </a>
+            </div>
+
+            <!-- Text Content -->
+            <div class="content lg:text-left w-full">
+                <h1 class="text-2xl font-bold pb-4 pt-4 text-white">Salus Mobile App</h1>
+                <p class="font-light italic mb-4 text-white">
+                    Coming to App Stores Summer 2025...
+                </p>
+
+                <div class="flex flex-wrap gap-2 pb-4">
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">TypeScript</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">HTML</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">CSS</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Nodejs</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Supabase</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">Flutter</div>
+                    <div class="border-2 border-solid border-gray-700 px-3 py-1 rounded-2xl text-white">OpenAI API</div>
+                </div>
+                <div class="flex flex-wrap pb-4 gap-2 text-white">
+                    <p>- In a team of three, developed an AI-powered fitness tracker mobile app utilizing a Node.js
+                        backend written in TypeScript with a Supabase database for user data, alongside a Flutter
+                        frontend.</p>
+                    <p>- Engineered and trained an AI chatbot using the OpenAI API to serve as a personalized fitness
+                        advisor, implementing custom prompts and dynamic variable integration for precise user
+                        interaction and tailored recommendations.</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://www.youtube.com/watch?v=PYFkLLlMIdQ&t=194s" target="_blank">
+                        <div>Demo Video</div>
+                    </a>
+                    <a class="text-white font-semibold px-3 py-2 rounded-2xl w-36 text-center border-gray-700 border-solid border-2 transition-transform duration-300 transform hover:-translate-y-1"
+                       href="https://www.braedenpoole.com/salus.html" target="_blank">
+                        <div>Link To Site</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--About Section-->
+<section id="about" class="lg:h-1/4 md:h-fit sm:h-auto text-white pb-24" style="background-image: linear-gradient(#1d2436, #272e3f);
+;">
+    <div class="container mx-auto h-fit">
+        <h1 class="text-2xl font-bold mb-4 justify-center pt-24 order-1 pb-10 text-center">About</h1>
+
+
+        <!-- Text Content -->
+        <div class="text-center justify-center lg:text-center">
+            <p class="text-xl mb-4 justify-start pr-16 pl-16 lg:pr-60 lg:pl-60">
+                As a collegiate baseball player turned programmer, I am driven towards creating technologies that can
+                solve problems.
+                Through my past years of experience in this industry, I have developed my own crypto and stock market
+                research tool, along with an optimized packaged software solution for a client's gymnastics coaching
+                business.
+                Currently, I am developing an Artificial Intelligence powered fitness tracker mobile app named Salus.
+                I am quietly confident and driven by a passion to develop creative solutions to any problem.
+            </p>
+        </div>
+        <div class="flex lg:items-center justify-center items-center mt-4 space-x-6 pt-8">
+            <a title="LinkedIn"
+               class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+               href="https://www.linkedin.com/in/braedenpoole" target="_blank">
+                <img class="h-10 w-10 rounded-lg" src="Images/linkedInLogo.png">
+            </a>
+            <a title="Github"
+               class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+               href="https://github.com/braedenpoole" target="_blank">
+                <img class="h-10 w-10 rounded-lg" src="Images/githubLogo.webp">
+            </a>
+            <a title="Resume"
+               class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+               href="https://drive.google.com/file/d/1ctseDTVqeJSSqPmqse0FLxoSgUtW7MuH/view?usp=sharing"
+               target="_blank">
+                <img class="h-10 w-10 rounded-lg" src="Images/resumeLogo.png">
+            </a>
+            <a title="Youtube"
+               class="h-10 w-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-1"
+               href="http://www.youtube.com/@braedenpoole1" target="_blank">
+                <img class="h-10 w-10 rounded-lg" src="Images/youtubeLogo.png">
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+    // JavaScript to toggle the visibility of the menu, this is to switch back and forth from desktop to mobile
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-navbar-menu');
+        menu.classList.toggle('hidden');
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const scrollButtons = document.querySelectorAll('.scroll-btn');
+        scrollButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = button.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
+    });
 </script>
 
 </body>
